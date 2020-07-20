@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="edit-item.css">
+    <title>ExerNote - application for storing and browsing daily exercise</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-inverse navbar-dark  bg-dark">
+
+            <ul class="nav navbar-left">
+                <li><a class="navbar-brand" href="show.html">Zoznam</a></li>
+                <li><a class="navbar-brand" href="item.html">Pridat</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Prihlasit sa</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <div class="mx-1 px-1 my-1 py-1">
+        <form class="">
+            <div class="form-group row">
+                <input class="form-control mx-5 text-center h2" type="text" placeholder="Cvicenie">    
+            </div>
+            <div class="form-group border px-1 py-1">
+                <div class="row">
+                    <p class="col-4 text-left">Datum</p>
+                    <input type="date" class="col-7 text-center border" value="01/25/2020">
+                </div>
+                <div class="row">
+                    <p class="col-4 text-left">Cas</p>
+                    <input class="form-control text-center col-7 border" type="text" placeholder="27 min">
+                </div>
+            </div>
+            <div class="form-group border px-1 py-1">
+                <div class="container-lg">
+                    <div class="table-responsive">
+                        <table class="table text-center">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" class="col-6">Cvik</th>
+                                    <th scope="col" class="col-1">Vaha</th>
+                                    <th scope="col" class="col-3">Opak.</th>
+                                    <th scope="col" class="col-2">Akcia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Benc</td>
+                                    <td>90</td>
+                                    <td>3x10</td>
+                                    <td>
+                                        <a class="add" title="Add" data-toggle="tooltip"><i
+                                                class="material-icons">&#xE03B;</i></a>
+                                        <a class="edit" title="Edit" data-toggle="tooltip"><i
+                                                class="material-icons">&#xE254;</i></a>
+                                        <a class="delete" title="Delete" data-toggle="tooltip"><i
+                                                class="material-icons">&#xE872;</i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="row  justify-content-center">
+        <button type="submit" class="col-5 btn btn-success mx-1">Ulozit</button>
+        <button type="button" class="col-5 btn btn-info add-new">Pridat novy riadok</button>
+
+    </div>
+    </form>
+    </div>
+
+    <footer class="page-footer font-small dark">
+
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="#"> MDBootstrap.com</a>
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        var actions = $("table td:last-child").html();
+        // Append table with add row form on add new button click
+        $(".add-new").click(function () {
+            $(this).attr("disabled", "disabled");
+            var index = $("table tbody tr:last-child").index();
+            var row = '<tr>' +
+                '<td><input type="text" class="form-control" id="exercise"></td>' +
+                '<td><input type="text" class="form-control" id="weight"></td>' +
+                '<td><input type="text" class="form-control" id="series"></td>' +
+                '<td>' + actions + '</td>' +
+                '</tr>';
+            $("table").append(row);
+            $("table tbody tr").eq(index + 1).find(".add, .edit").toggle();
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        // Add row on add button click
+        $(document).on("click", ".add", function () {
+            var empty = false;
+            var input = $(this).parents("tr").find('input[type="text"]');
+            // input.each(function () {
+            //     if (!$(this).val()) {
+            //         $(this).addClass("error");
+            //         empty = true;
+            //     } else {
+            //         $(this).removeClass("error");
+            //     }
+            // });
+            $(this).parents("tr").find(".error").first().focus();
+            if (!empty) {
+                input.each(function () {
+                    $(this).parent("td").html($(this).val());
+                });
+                $(this).parents("tr").find(".add, .edit").toggle();
+                $(".add-new").removeAttr("disabled");
+            }
+        });
+        // Edit row on edit button click
+        $(document).on("click", ".edit", function () {
+            $(this).parents("tr").find("td:not(:last-child)").each(function () {
+                $(this).html('<input type="text" class="form-control" value="' + $(this).text() + '">');
+            });
+            $(this).parents("tr").find(".add, .edit").toggle();
+            $(".add-new").attr("disabled", "disabled");
+        });
+        // Delete row on delete button click
+        $(document).on("click", ".delete", function () {
+            $(this).parents("tr").remove();
+            $(".add-new").removeAttr("disabled");
+        });
+    });
+</script>
+
+</html>

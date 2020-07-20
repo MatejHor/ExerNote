@@ -1,0 +1,31 @@
+<%= render 'layouts/header' %>
+
+<div class="content-container">
+  <div class="card border">
+    <% @days.each do |day| %>
+      <div class="card-body">
+        <h5 class="card-title border-bottom"><%= day.date %></h5>
+        <% day.exercises.each do |exercise| %>
+          <a class="link-unstyled" href="<%= exercise.id %>">
+            <div class="row">
+              <p class="col-8 text-left"><%= exercise.title %></p>
+              <p class="col-4 text-right">Cas: <%= exercise.time %> min</p>
+            </div>
+          </a>
+        <% end %>
+      </div>
+    <% end %>
+
+<!--    <div class="card-body">-->
+<!--      <h5 class="card-title border-bottom">27.1.2020</h5>-->
+<!--      <a class="link-unstyled" href="Item.html">-->
+<!--        <div class="row">-->
+<!--          <p class="col-8 text-left">Cvicenie</p>-->
+<!--          <p class="col-4 text-right">Cas: 27 min</p>-->
+<!--        </div>-->
+<!--      </a>-->
+<!--    </div>-->
+  </div>
+</div>
+
+<%= render 'layouts/footer' %>
