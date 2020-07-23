@@ -1887,3 +1887,677 @@ Processing by ExerciseController#show as HTML
 Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 3743)
 
 
+Started GET "/" for 127.0.0.1 at 2020-07-23 22:39:00 +0200
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ExerciseController#show as HTML
+  Rendering exercise/show.html.erb within layouts/application
+  Rendered exercise/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 430)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms | Allocations: 9322)
+
+
+  
+ActionView::Template::Error (Missing partial exercise/_header, application/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/mnt/c/Users/matho/MyDatas/ExerNote/app/views"
+  * "/home/matho/.rvm/gems/ruby-2.7.0/gems/actiontext-6.0.3.2/app/views"
+  * "/home/matho/.rvm/gems/ruby-2.7.0/gems/actionmailbox-6.0.3.2/app/views"
+):
+    39: </head>
+    40: 
+    41: <body>
+    42: <%= render 'header' %>
+    43: 
+    44: <%= yield %>
+    45: 
+  
+app/views/layouts/application.html.erb:42
+app/controllers/exercise_controller.rb:6:in `show'
+Started GET "/" for 127.0.0.1 at 2020-07-23 22:39:16 +0200
+Processing by ExerciseController#show as HTML
+  Rendering exercise/show.html.erb within layouts/application
+  Rendered exercise/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 308)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 88)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 85)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 5297)
+
+
+Started GET "/show.html" for 127.0.0.1 at 2020-07-23 22:41:34 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/show.html"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-07-23 22:41:36 +0200
+Processing by ExerciseController#show as HTML
+  Rendering exercise/show.html.erb within layouts/application
+  Rendered exercise/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 297)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 5224)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 22:48:35 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 300)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 5353)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 22:48:37 +0200
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 3576)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 22:48:38 +0200
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 67)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 3556)
+
+
+Started GET "/show.html" for 127.0.0.1 at 2020-07-23 22:50:20 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/show.html"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/exercise" for 127.0.0.1 at 2020-07-23 22:50:33 +0200
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 5229)
+
+
+Started GET "/exercise/1" for 127.0.0.1 at 2020-07-23 22:50:37 +0200
+Processing by ExerciseController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering exercise/show.html.erb within layouts/application
+  Rendered exercise/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 3754)
+
+
+Started GET "/exercise/1" for 127.0.0.1 at 2020-07-23 22:51:33 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ExerciseController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering exercise/show.html.erb within layouts/application
+  Rendered exercise/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 3618)
+
+
+Started GET "/exercise/1" for 127.0.0.1 at 2020-07-23 23:02:12 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ExerciseController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering exercise/show.html.erb within layouts/application
+  Rendered exercise/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 124)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 5072)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 23:02:14 +0200
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 3937)
+
+
+Started GET "/exercise/1" for 127.0.0.1 at 2020-07-23 23:02:14 +0200
+Processing by ExerciseController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering exercise/show.html.erb within layouts/application
+  Rendered exercise/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 3463)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 23:02:16 +0200
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 3574)
+
+
+Started GET "/exercise/1" for 127.0.0.1 at 2020-07-23 23:02:17 +0200
+Processing by ExerciseController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering exercise/show.html.erb within layouts/application
+  Rendered exercise/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 189ms (Views: 188.8ms | ActiveRecord: 0.0ms | Allocations: 13753)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 23:02:17 +0200
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 3556)
+
+
+Started GET "/exercise/1" for 127.0.0.1 at 2020-07-23 23:02:18 +0200
+Processing by ExerciseController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering exercise/show.html.erb within layouts/application
+  Rendered exercise/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 3574)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 23:02:19 +0200
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 3594)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 23:05:40 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 295)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 80)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.0ms | Allocations: 6565)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:05:41 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 208)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 3846)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:06:17 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 5190)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:06:18 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 3490)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:06:33 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 210)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 5098)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:06:34 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 3491)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:26:37 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 80)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 5087)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:27:23 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 5272)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:27:53 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 5092)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:28:43 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 81)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.0ms | Allocations: 7040)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:29:17 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 5099)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:29:23 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 5100)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:30:28 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 5144)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:30:35 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 210)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms | Allocations: 6102)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:30:45 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 5171)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:30:55 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms | Allocations: 6085)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 23:31:10 +0200
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 295)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 3917)
+
+
+Started GET "/exercise/1" for 127.0.0.1 at 2020-07-23 23:31:12 +0200
+Processing by ExerciseController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering exercise/show.html.erb within layouts/application
+  Rendered exercise/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 3730)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:31:46 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 34ms (Views: 33.8ms | ActiveRecord: 0.0ms | Allocations: 4715)
+
+
+Started POST "/exercise" for 127.0.0.1 at 2020-07-23 23:31:47 +0200
+Processing by ExerciseController#create as HTML
+No template found for ExerciseController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 1578)
+
+
+Started POST "/exercise" for 127.0.0.1 at 2020-07-23 23:31:49 +0200
+Processing by ExerciseController#create as HTML
+No template found for ExerciseController#create, rendering head :no_content
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 291)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:34:50 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 3635)
+
+
+Started POST "/exercise" for 127.0.0.1 at 2020-07-23 23:34:51 +0200
+Processing by ExerciseController#create as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 285)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 23:34:51 +0200
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 3581)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:35:46 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 3472)
+
+
+Started POST "/exercise" for 127.0.0.1 at 2020-07-23 23:35:59 +0200
+Processing by ExerciseController#create as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 268)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 23:35:59 +0200
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 3558)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:40:34 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 212)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 5158)
+
+
+Started POST "/exercise" for 127.0.0.1 at 2020-07-23 23:40:42 +0200
+Processing by ExerciseController#create as HTML
+  Parameters: {"title"=>"saddqw", "date"=>"2020-07-07", "time"=>"asd"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 285)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 23:40:42 +0200
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 3894)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:41:55 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 5078)
+
+
+Started POST "/exercise" for 127.0.0.1 at 2020-07-23 23:42:03 +0200
+Processing by ExerciseController#create as HTML
+  Parameters: {"title"=>"asdq", "date"=>"2020-07-11", "time"=>"wqe"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 262)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 23:42:03 +0200
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 3904)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:55:17 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 273)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 5196)
+
+
+Started POST "/exercise" for 127.0.0.1 at 2020-07-23 23:55:29 +0200
+Processing by ExerciseController#create as HTML
+  Parameters: {"title"=>"1211111", "date"=>"2020-07-17", "time"=>"123"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 266)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 23:55:29 +0200
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 18ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 4254)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:56:25 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 5165)
+
+
+Started POST "/exercise" for 127.0.0.1 at 2020-07-23 23:56:38 +0200
+Processing by ExerciseController#create as HTML
+  Parameters: {"title"=>"11111111111111111111111111", "date"=>"0001-02-16", "time"=>"asd", "name"=>"", "weight"=>"", "series"=>""}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 264)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 23:56:38 +0200
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 3897)
+
+
+Started POST "/exercise" for 127.0.0.1 at 2020-07-23 23:57:06 +0200
+Processing by ExerciseController#create as HTML
+  Parameters: {"title"=>"1", "date"=>"0001-02-10", "time"=>"111", "name"=>"", "weight"=>"", "series"=>""}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 23:57:06 +0200
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 10ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 3527)
+
+
+Started GET "/exercise/new" for 127.0.0.1 at 2020-07-23 23:57:29 +0200
+Processing by ExerciseController#new as HTML
+  Rendering exercise/new.html.erb within layouts/application
+  Rendered exercise/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 5152)
+
+
+Started POST "/exercise" for 127.0.0.1 at 2020-07-23 23:57:38 +0200
+Processing by ExerciseController#create as HTML
+  Parameters: {"title"=>"2", "date"=>"2020-07-08", "time"=>"12", "name"=>"Benc", "weight"=>"90", "series"=>"3x10"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 262)
+
+
+Started GET "/" for 127.0.0.1 at 2020-07-23 23:57:38 +0200
+Processing by ExerciseController#index as HTML
+  Rendering exercise/index.html.erb within layouts/application
+  Rendered exercise/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 3909)
+
+

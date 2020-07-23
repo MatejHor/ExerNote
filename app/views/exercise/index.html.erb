@@ -1,0 +1,19 @@
+<div class="content-container">
+  <div class="card border">
+    <% @days.each do |day| %>
+      <div class="card-body">
+        <h5 class="card-title border-bottom"><%= day.date %></h5>
+        <% day.exercises.each do |exercise| %>
+          <a class="link-unstyled" href="/exercise/<%= exercise.id %>">
+            <div class="row">
+              <p class="col-8 text-left"><%= exercise.title %></p>
+              <p class="col-4 text-right">Cas: <%= exercise.time %> min</p>
+            </div>
+          </a>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+

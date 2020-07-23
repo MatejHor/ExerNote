@@ -1,31 +1,43 @@
-<%= render 'layouts/header' %>
-
-<div class="content-container">
-  <div class="card border">
-    <% @days.each do |day| %>
-      <div class="card-body">
-        <h5 class="card-title border-bottom"><%= day.date %></h5>
-        <% day.exercises.each do |exercise| %>
-          <a class="link-unstyled" href="<%= exercise.id %>">
-            <div class="row">
-              <p class="col-8 text-left"><%= exercise.title %></p>
-              <p class="col-4 text-right">Cas: <%= exercise.time %> min</p>
-            </div>
-          </a>
-        <% end %>
+<div class="mx-1 px-1 my-1 py-1">
+  <form class="">
+    <div class="form-group row">
+      <p class="col-12 text-center h2">Cvicenie</p>
+    </div>
+    <div class="form-group border px-1 py-1">
+      <div class="row">
+        <p class="col-8 text-left">Datum</p>
+        <p class="col-4 text-center">27.1.2020</p>
       </div>
-    <% end %>
-
-<!--    <div class="card-body">-->
-<!--      <h5 class="card-title border-bottom">27.1.2020</h5>-->
-<!--      <a class="link-unstyled" href="Item.html">-->
-<!--        <div class="row">-->
-<!--          <p class="col-8 text-left">Cvicenie</p>-->
-<!--          <p class="col-4 text-right">Cas: 27 min</p>-->
-<!--        </div>-->
-<!--      </a>-->
-<!--    </div>-->
-  </div>
+      <div class="row">
+        <p class="col-8 text-left">Cas</p>
+        <p class="col-4 text-center">27 min</p>
+      </div>
+    </div>
+    <div class="form-group border px-1 py-1">
+      <table class="table text-center">
+        <thead class="thead-dark">
+        <tr>
+          <th scope="col" class="w-40">Cvik</th>
+          <th scope="col" class="w-25">Vaha</th>
+          <th scope="col" class="w-35">Opak.</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="w-40">Benc</td>
+          <td class="w-25">90</td>
+          <td class="w-35">3x10</td>
+        </tr>
+        <tr>
+          <td class="w-40">Zhyby</td>
+          <td class="w-25">20</td>
+          <td class="w-35">10 15 20</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row  justify-content-center">
+      <button type="delete" class="col-5 btn btn-danger mx-1">Vymazat</button>
+      <a href="/exercise/1" class="btn btn-warning col-5" role="button">Upravit</a></div>
+  </form>
 </div>
-
-<%= render 'layouts/footer' %>
