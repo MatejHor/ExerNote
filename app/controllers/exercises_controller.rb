@@ -20,7 +20,6 @@ class ExercisesController < ApplicationController
   end
 
   def new
-    render
   end
 
   def create
@@ -38,7 +37,7 @@ class ExercisesController < ApplicationController
 
   def update
     Exercise.update(id = params[:id], exercise_params)
-    redirect_to root_path
+    redirect_to exercise_path(params[:id])
   end
 
   private
