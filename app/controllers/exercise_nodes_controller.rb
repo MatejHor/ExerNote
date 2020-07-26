@@ -13,4 +13,6 @@ class ExerciseNodesController < ApplicationController
 
     redirect_to exercise_path(params[:id])
   end
+
+  # TODO add remove exercise node
 end
