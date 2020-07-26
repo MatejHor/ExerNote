@@ -1,10 +1,10 @@
 <div class="content-container">
   <div class="card border">
-    <% @days.each do |day| %>
+    <% @exercises_day.each do |exercises| %>
       <div class="card-body">
-        <h5 class="card-title border-bottom"><%= day.date %></h5>
-        <% day.exercises.each do |exercise| %>
-          <a class="link-unstyled" href="/exercise/<%= exercise.id %>">
+        <h5 class="card-title border-bottom"><%= exercises[0].created_at.strftime("%d.%m.%Y") %></h5>
+        <% exercises.each do |exercise| %>
+          <a class="link-unstyled" href="<%= exercise_path(exercise) %>">
             <div class="row">
               <p class="col-8 text-left"><%= exercise.title %></p>
               <p class="col-4 text-right">Cas: <%= exercise.time %> min</p>
