@@ -10,34 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_25_221846) do
+ActiveRecord::Schema.define(version: 2020_07_26_112138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "exercise_nodes", force: :cascade do |t|
-    t.string "title"
-    t.string "weight"
-    t.string "series"
-    t.integer "exercise_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "exercises", force: :cascade do |t|
     t.string "title"
     t.string "time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.jsonb "exercises", default: "{}", null: false
-  end
-
-  create_table "trainings", force: :cascade do |t|
-    t.string "title"
-    t.string "weigh"
-    t.string "series"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.jsonb "exercises", default: [], null: false
+    t.string "distance"
   end
 
 end

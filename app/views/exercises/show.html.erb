@@ -1,18 +1,24 @@
 <div class="mx-1 px-1 my-1 py-1">
-  <form class="">
-    <div class="form-group row">
-      <p class="col-12 text-center h2"><%= @exercise.title %></p>
+  <div class="form-group row">
+    <p class="col-12 text-center h2"><%= @exercise.title %></p>
+  </div>
+  <div class="form-group border px-1 py-1">
+    <div class="row">
+      <p class="col-6 text-center">Datum</p>
+      <p class="col-6 text-center"><%= @exercise.created_at.strftime("%d.%m.%Y") %></p>
     </div>
-    <div class="form-group border px-1 py-1">
-      <div class="row">
-        <p class="col-6 text-center">Datum</p>
-        <p class="col-6 text-center"><%= @exercise.created_at.strftime("%d.%m.%Y") %></p>
-      </div>
-      <div class="row">
-        <p class="col-6 text-center">Cas</p>
-        <p class="col-6 text-center"><%= @exercise.time %> min</p>
-      </div>
+    <div class="row">
+      <p class="col-6 text-center">Cas</p>
+      <p class="col-6 text-center"><%= @exercise.time %> min</p>
     </div>
+    <% if @exercise.distance %>
+      <div class="row">
+        <p class="col-6 text-center">Vzdialenost</p>
+        <p class="col-6 text-center"><%= @exercise.distance %> km</p>
+      </div>
+    <% end %>
+  </div>
+  <% unless @exercise.distance %>
     <div class="form-group border px-1 py-1">
       <table class="table text-center">
         <thead class="thead-dark">
@@ -33,13 +39,24 @@
         </tbody>
       </table>
     </div>
-    <div class="row  justify-content-center">
-      <%= link_to exercise_path { @exercise }, method: :delete, class: "col-5 btn btn-danger mx-1" do %>
-        <span class="glyphicon glyphicon-trash">Vymazat</span>
-      <% end %>
-      <%= link_to exercise_path { @exercise }, method: :put, class: "col-5 btn btn-warning mx-1" do %>
-        <span class="glyphicon glyphicon-trash">Upravit</span>
-      <% end %>
-    </div>
-  </form>
+  <% end %>
+  <div class="row  justify-content-center">
+    <%= link_to exercise_path { @exercise }, method: :delete, class: "col-3 btn btn-danger mx-1" do %>
+      <span class="glyphicon glyphicon-trash">Vymazat</span>
+    <% end %>
+
+    <button type="button" class="col-3 btn btn-warning mx-1" data-toggle="modal" data-target="#updateModel" value="
+        <% @exercise.id %>">
+      Upravit
+    </button>
+    <%= render 'exercises/update' %>
+
+    <% unless @exercise.distance %>
+      <button type="button" class="col-3 btn btn-info mx-1" data-toggle="modal" data-target="#addNodeModal" value="
+        <% @exercise.id %>">
+        Vlozit cvik
+      </button>
+      <%= render 'exercise_nodes/add_exercise_note' %>
+    <% end %>
+  </div>
 </div>

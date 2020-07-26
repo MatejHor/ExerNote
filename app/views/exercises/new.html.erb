@@ -1,7 +1,5 @@
 <div class="mx-1 px-1 my-1 py-1">
-  <%= form_for :exercises, url: '/exercises', html: {class: ''} do %>
-
-    <!--  <form class="" action="/exercises" method="POST">-->
+  <%= form_tag exercises_path, method: :post, class: "" do %>
     <div class="form-group row">
       <input class="input-unstyled form-control mx-5 text-center h2" type="text" name="exercise[title]" value="Cvicenie">
     </div>
@@ -11,103 +9,16 @@
         <input type="date" class="col-7 text-center input-unstyled" name="exercise[created_at]" value="01/25/2020">
       </div>
       <div class="row">
-        <p class="col-4 text-center mx-2">Cas</p>
-        <input class="form-control text-center col-7 input-unstyled" name="exercise[time]" type="text" value="27">
+        <p class="col-4 text-center mx-2">Cas v minutach</p>
+        <input class="form-control text-center col-7 input-unstyled" name="exercise[time]" type="text">
       </div>
-    </div>
-    <div class="form-group border px-1 py-1">
-      <div class="container-lg">
-        <div class="table-responsive">
-          <table class="table text-center">
-            <thead class="thead-dark">
-            <tr>
-              <th scope="col" class="w-30">Cvik</th>
-              <th scope="col" class="w-20">Vaha</th>
-              <th scope="col" class="w-20">Opak.</th>
-              <th scope="col" class="w-30">Akcia</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <%= form_for :exercise_node, url: '/exercise_node', html: {class: ''} do %>
-                <input type="hidden" name="training[exercise_id]" value="<%= @exercise_id %>"/>
-                <td class="w-30"><input class="input-unstyled" readonly name="training[name]" value="Benc"/></td>
-                <td class="w-20"><input class="input-unstyled" readonly name="training[weight]" value="90"/></td>
-                <td class="w-20"><input class="input-unstyled" readonly name="training[series]" value="3x10"/></td>
-                <td class="w-30">
-                  <button type="submit" class="add material-icons input-unstyled" title="Add" ><i>&#xE03B;</i></button>
-                  <a class="edit" title="Edit" data-toggle="tooltip"><i
-                    class="material-icons">&#xE254;</i></a>
-                  <a class="delete" title="Delete" data-toggle="tooltip"><i
-                    class="material-icons">&#xE872;</i></a>
-                </td>
-                <% end %>
-            </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="row">
+        <p class="col-4 text-center mx-2">Vzdialenost v kilometroch</p>
+        <input class="form-control text-center col-7 input-unstyled" name="exercise[distance]" type="text">
       </div>
     </div>
     <div class="row  justify-content-center">
       <button type="submit" class="col-5 btn btn-success mx-1">Ulozit</button>
-      <button type="button" class="col-5 btn btn-info add-new">Pridat novy riadok</button>
-
     </div>
-    <!--  </form>-->
   <% end %>
 </div>
-
-<script>
-    $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-        var actions = $("table td:last-child").html();
-        // Append table with add row form on add new button click
-        $(".add-new").click(function () {
-            $(this).attr("disabled", "disabled");
-            var index = $("table tbody tr:last-child").index();
-            var row = '<tr>' +
-                '<td class="w-30"><input type="text" class="form-control input-unstyled" name="training[name]"></td>' +
-                '<td class="w-20"><input type="text" class="form-control input-unstyled" name="training[weight]"></td>' +
-                '<td class="w-20"><input type="text" class="form-control input-unstyled" name="training[series]"></td>' +
-                '<td class="w-30">' + actions + '</td>' +
-                '</tr>';
-            $("table").append(row);
-            $("table tbody tr").eq(index + 1).find(".add, .edit").toggle();
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-        // Add row on add button click
-        $(document).on("click", ".add", function () {
-            var empty = false;
-            var input = $(this).parents("tr").find('input[type="text"]');
-            // input.each(function () {
-            //     if (!$(this).val()) {
-            //         $(this).addClass("error");
-            //         empty = true;
-            //     } else {
-            //         $(this).removeClass("error");
-            //     }
-            // });
-            $(this).parents("tr").find(".error").first().focus();
-            if (!empty) {
-                input.each(function () {
-                    $(this).parent("td").html($(this).val());
-                });
-                $(this).parents("tr").find(".add, .edit").toggle();
-                $(".add-new").removeAttr("disabled");
-            }
-        });
-        // Edit row on edit button click
-        $(document).on("click", ".edit", function () {
-            $(this).parents("tr").find("td:not(:last-child)").each(function () {
-                $(this).html('<input type="text" class="form-control" value="' + $(this).text() + '">');
-            });
-            $(this).parents("tr").find(".add, .edit").toggle();
-            $(".add-new").attr("disabled", "disabled");
-        });
-        // Delete row on delete button click
-        $(document).on("click", ".delete", function () {
-            $(this).parents("tr").remove();
-            $(".add-new").removeAttr("disabled");
-        });
-    });
-</script>

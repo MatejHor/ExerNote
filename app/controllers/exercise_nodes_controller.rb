@@ -1,23 +1,16 @@
 class ExerciseNodesController < ApplicationController
-  def new
-    render
-  end
+  def add_node
+    exercise = Exercise.find(params[:id])
 
-  def create
-    Exercise.create(exercise_node_params)
-  end
+    node = {
+        "title" => params[:title],
+        "weight" => params[:weight],
+        "series" => params[:series]
+    }
 
-  def destroy
-    ExerciseNode.destroy(params[:id])
-  end
+    exercise.exercises.push(node)
+    exercise.save
 
-  def update
-    render
-  end
-
-  private
-
-  def exercise_node_params
-    params.require(:exercise).permit(:title, :weight, :series, :exercise_id)
+    redirect_to exercise_path(params[:id])
   end
 end

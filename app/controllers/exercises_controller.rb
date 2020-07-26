@@ -1,7 +1,8 @@
 class ExercisesController < ApplicationController
   def show
     @exercise = Exercise.find(params[:id])
-    @exercise.exercises = ActiveSupport::JSON.decode @exercise.exercises.to_s.gsub('=>', ':')
+    @exercise.exercises = parse_json @exercise.exercises
+    @exercise.distance
     render
   end
 
@@ -17,15 +18,16 @@ class ExercisesController < ApplicationController
         exercises = []
       end
     end
-    render
   end
 
   def new
-    @exercise_id = Exercise.maximum(:id).next
     render
   end
 
   def create
+    if params[:exercise][:distance] == ""
+      params[:exercise][:distance] = nil
+    end
     Exercise.create(exercise_params)
     redirect_to root_path
   end
@@ -36,12 +38,17 @@ class ExercisesController < ApplicationController
   end
 
   def update
+    Exercise.update(id = params[:id], exercise_params)
     redirect_to root_path
   end
 
   private
 
   def exercise_params
-    params.require(:exercise).permit(:title, :time, :created_at)
+    params.require(:exercise).permit(:title, :time, :created_at, :distance)
+  end
+
+  def parse_json(json)
+    ActiveSupport::JSON.decode json.to_s.gsub('=>', ':')
   end
 end
