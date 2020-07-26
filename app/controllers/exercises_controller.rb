@@ -2,7 +2,6 @@ class ExercisesController < ApplicationController
   def show
     @exercise = Exercise.find(params[:id])
     @exercise.exercises = parse_json @exercise.exercises
-    @exercise.distance
     render
   end
 

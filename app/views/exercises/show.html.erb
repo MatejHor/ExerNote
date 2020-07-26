@@ -23,17 +23,30 @@
       <table class="table text-center">
         <thead class="thead-dark">
         <tr>
-          <th scope="col" class="w-40">Cvik</th>
-          <th scope="col" class="w-25">Vaha</th>
-          <th scope="col" class="w-35">Opak.</th>
+          <th scope="col" class="w-35">Cvik</th>
+          <th scope="col" class="w-15">Vaha</th>
+          <th scope="col" class="w-25">Opak.</th>
+          <th scope="col" class="w-25">Action</th>
         </tr>
         </thead>
         <tbody>
         <% @exercise.exercises.each do |exercise| %>
           <tr>
-            <td class="w-40"><%= exercise['title'] %></td>
-            <td class="w-25"><%= exercise['weight'] %></td>
-            <td class="w-35"><%= exercise['series'] %></td>
+            <%= form_tag delete_node_path, method: :delete, class: "" do %>
+              <input value="<%= @exercise.id %>" name="id" type="hidden"/>
+              <td class="w-35">
+                <input type="text" name="title" class="input-unstyled text-center" readonly value="<%= exercise['title'] %>"/>
+              </td>
+              <td class="w-15">
+                <input type="text" name="weight" class="input-unstyled text-center" readonly value="<%= exercise['weight'] %>"/>
+              </td>
+              <td class="w-25">
+                <input type="text" name="series" class="input-unstyled text-center" readonly value="<%= exercise['series'] %>"/>
+              </td>
+              <td class="w-25">
+                <button type="submit" class="btn btn-error"><i class="material-icons">delete</i></button>
+              </td>
+            <% end %>
           </tr>
         <% end %>
         </tbody>
@@ -41,21 +54,26 @@
     </div>
   <% end %>
   <div class="row  justify-content-center">
+    <!--    Button for delete exercise-->
     <%= link_to exercise_path { @exercise }, method: :delete, class: "col-3 btn btn-danger mx-1" do %>
       <span class="glyphicon glyphicon-trash">Vymazat</span>
     <% end %>
 
+    <!--    Button for update exercise-->
     <button type="button" class="col-3 btn btn-warning mx-1" data-toggle="modal" data-target="#updateModel" value="
         <% @exercise.id %>">
       Upravit
     </button>
+    <!--    Popup window for update exercise-->
     <%= render 'exercises/update' %>
 
+    <!--    Button for add new exercise node-->
     <% unless @exercise.distance %>
       <button type="button" class="col-3 btn btn-info mx-1" data-toggle="modal" data-target="#addNodeModal" value="
         <% @exercise.id %>">
         Vlozit cvik
       </button>
+      <!--    Popup window for add new exercise node-->
       <%= render 'exercise_nodes/add_exercise_note' %>
     <% end %>
   </div>
