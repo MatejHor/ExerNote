@@ -36,4 +36,27 @@ class TutorialController < ApplicationController
     # rake test
   end
 
+  def heroku
+    # Create heroku
+    # heroku create
+
+    # Push heroku from git
+    # git push heroku master
+
+    # See heroku logs
+    # heroku logs --tail
+
+    # Open heroku app
+    # heroku open
+
+    # Open enviroment on heroku
+    # heroku config:set Key=value
+
+    # Run heroku rails console
+    # heroku run rails console
+
+    # Open database from heroku
+    # heroku pg:psql
+  end
+
 end

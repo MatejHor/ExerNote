@@ -60,3 +60,7 @@ development:
 test:
   <<: *default
   database: ExerNote_test
+
+production:
+  <<: *default
+  database: ExerNote_development
