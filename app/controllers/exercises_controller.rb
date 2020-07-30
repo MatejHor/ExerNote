@@ -40,6 +40,9 @@ class ExercisesController < ApplicationController
   private
 
   def exercise_params
+    if params[:exercise][:distance].eql? ""
+      params[:exercise][:distance] = nil
+    end
     params.require(:exercise).permit(:title, :time, :created_at, :distance)
   end
 
