@@ -57,6 +57,9 @@ class TutorialController < ApplicationController
 
     # Open database from heroku
     # heroku pg:psql
+
+    # Info about db
+    # heroku pg:info
   end
 
 end
