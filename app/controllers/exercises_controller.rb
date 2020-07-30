@@ -28,6 +28,7 @@ class ExercisesController < ApplicationController
   end
 
   def destroy
+    puts 'Removing ' + params[:id]
     Exercise.destroy(params[:id])
     redirect_to root_path
   end
