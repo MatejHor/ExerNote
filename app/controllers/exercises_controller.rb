@@ -26,7 +26,7 @@ class ExercisesController < ApplicationController
     if params[:exercise][:distance] == ""
       params[:exercise][:distance] = nil
     end
-    Exercise.create(exercise_params)
+    Exercise.create(params[:exercise])
     redirect_to root_path
   end
 
