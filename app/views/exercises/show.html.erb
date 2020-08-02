@@ -35,16 +35,16 @@
             <%= form_tag delete_node_path, method: :delete, class: "" do %>
               <input value="<%= @exercise.id %>" name="id" type="hidden"/>
               <td class="w-35">
-                <input type="text" name="title" class="input-unstyled link-unstyled text-center" readonly value="<%= exercise['title'] %>"/>
+                <input type="text" name="title" class="special-width input-unstyled link-unstyled text-center" readonly value="<%= exercise['title'] %>"/>
               </td>
               <td class="w-15">
-                <input type="text" name="weight" class="input-unstyled link-unstyled text-center" readonly value="<%= exercise['weight'] %>"/>
+                <input type="text" name="weight" class="special-width input-unstyled link-unstyled text-center" readonly value="<%= exercise['weight'] %>"/>
               </td>
               <td class="w-25">
-                <input type="text" name="series" class="input-unstyled link-unstyled text-center" readonly value="<%= exercise['series'] %>"/>
+                <input type="text" name="series" class="special-width input-unstyled link-unstyled text-center" readonly value="<%= exercise['series'] %>"/>
               </td>
               <td class="w-25">
-                <button type="submit" class="input-unstyled btn btn-error"><i class="material-icons">delete</i></button>
+                <button type="submit" class="special-width input-unstyled btn btn-error"><i class="material-icons">delete</i></button>
               </td>
             <% end %>
           </tr>
