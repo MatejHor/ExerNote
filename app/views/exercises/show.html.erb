@@ -4,16 +4,16 @@
   </div>
   <div class="form-group border px-1 py-1">
     <div class="row">
-      <p class="col-6 text-center">Datum</p>
+      <p class="col-6 text-center">Dátum</p>
       <p class="col-6 text-center"><%= @exercise.created_at.strftime("%d.%m.%Y") %></p>
     </div>
     <div class="row">
-      <p class="col-6 text-center">Cas</p>
+      <p class="col-6 text-center">Čas</p>
       <p class="col-6 text-center"><%= @exercise.time %> min</p>
     </div>
     <% if @exercise.distance %>
       <div class="row">
-        <p class="col-6 text-center">Vzdialenost</p>
+        <p class="col-6 text-center">Vzdialenosť</p>
         <p class="col-6 text-center"><%= @exercise.distance %> km</p>
       </div>
     <% end %>
@@ -24,9 +24,9 @@
         <thead class="thead-dark">
         <tr>
           <th scope="col" class="w-35">Cvik</th>
-          <th scope="col" class="w-15">Vaha</th>
+          <th scope="col" class="w-15">Váha</th>
           <th scope="col" class="w-25">Opak.</th>
-          <th scope="col" class="w-25">Action</th>
+          <th scope="col" class="w-25">Akcia</th>
         </tr>
         </thead>
         <tbody>
@@ -35,16 +35,16 @@
             <%= form_tag delete_node_path, method: :delete, class: "" do %>
               <input value="<%= @exercise.id %>" name="id" type="hidden"/>
               <td class="w-35">
-                <input type="text" name="title" class="input-unstyled text-center" readonly value="<%= exercise['title'] %>"/>
+                <input type="text" name="title" class="input-unstyled link-unstyled text-center" readonly value="<%= exercise['title'] %>"/>
               </td>
               <td class="w-15">
-                <input type="text" name="weight" class="input-unstyled text-center" readonly value="<%= exercise['weight'] %>"/>
+                <input type="text" name="weight" class="input-unstyled link-unstyled text-center" readonly value="<%= exercise['weight'] %>"/>
               </td>
               <td class="w-25">
-                <input type="text" name="series" class="input-unstyled text-center" readonly value="<%= exercise['series'] %>"/>
+                <input type="text" name="series" class="input-unstyled link-unstyled text-center" readonly value="<%= exercise['series'] %>"/>
               </td>
               <td class="w-25">
-                <button type="submit" class="btn btn-error"><i class="material-icons">delete</i></button>
+                <button type="submit" class="input-unstyled btn btn-error"><i class="material-icons">delete</i></button>
               </td>
             <% end %>
           </tr>
@@ -56,13 +56,13 @@
   <div class="row  justify-content-center">
     <!--    Button for delete exercise-->
     <%= form_tag exercise_path { @exercise }, method: :delete, class: "col-3 btn btn-danger mx-1" do %>
-      <button type="submit" class="link-unstyled btn btn-danger col-12">Vymazat</button>
+      <button type="submit" class="link-unstyled px-0 py-2 btn btn-danger col-12">Vymazať</button>
     <% end %>
 
     <!--    Button for update exercise-->
     <button type="button" class="col-3 btn btn-warning mx-1" data-toggle="modal" data-target="#updateModel" value="
         <% @exercise.id %>">
-      Upravit
+      Upraviť
     </button>
     <!--    Popup window for update exercise-->
     <%= render 'exercises/update' %>
@@ -71,7 +71,7 @@
     <% unless @exercise.distance %>
       <button type="button" class="col-3 btn btn-info mx-1" data-toggle="modal" data-target="#addNodeModal" value="
         <% @exercise.id %>">
-        Vlozit cvik
+        Vložiť cvik
       </button>
       <!--    Popup window for add new exercise node-->
       <%= render 'exercise_nodes/add_exercise_note' %>
