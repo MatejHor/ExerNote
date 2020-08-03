@@ -16827,3 +16827,360 @@ Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 1870)
   [1m[36mActiveRecord::InternalMetadata Load (2.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6730005470621617905)[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-08-03 18:58:07 +0200
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" ORDER BY "exercises"."created_at" DESC[0m
+  ↳ app/controllers/exercises_controller.rb:12:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  Rendered exercises/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 321)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 18ms (Views: 3.8ms | ActiveRecord: 5.3ms | Allocations: 7220)
+
+
+Started GET "/exercises/5" for ::1 at 2020-08-03 18:59:12 +0200
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:3:in `show'
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/_delete.html.erb (Duration: 0.7ms | Allocations: 313)
+  Rendered exercises/_update.html.erb (Duration: 0.8ms | Allocations: 421)
+  Rendered exercise_nodes/_add_exercise_note.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered exercises/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2295)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.3ms | Allocations: 3753)
+
+
+Started POST "/add_node" for ::1 at 2020-08-03 18:59:32 +0200
+Processing by ExerciseNodesController#add_node as HTML
+  Parameters: {"authenticity_token"=>"vqmEEPKcSnb2//7fq1PipF9ejNBYMcGwFoAWJ31GyX/RlhZSVvYOOgATHxpL8CFKfFzRVIF42aJEhDkk3tzZCQ==", "id"=>"5", "title"=>"q12", "weight"=>"", "series"=>""}
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/exercise_nodes_controller.rb:4:in `add_node'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/exercise_nodes_controller.rb:15:in `add_node'
+  [1m[36mExercise Update (0.5ms)[0m  [1m[33mUPDATE "exercises" SET "exercises" = $1, "updated_at" = $2 WHERE "exercises"."id" = $3[0m  [["exercises", "[{\"title\":\"q12\",\"weight\":\"\",\"series\":\"\"}]"], ["updated_at", "2020-08-03 16:59:32.703554"], ["id", 5]]
+  ↳ app/controllers/exercise_nodes_controller.rb:15:in `add_node'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/exercise_nodes_controller.rb:15:in `add_node'
+Redirected to http://localhost:3000/exercises/5
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms | Allocations: 3227)
+
+
+Started GET "/exercises/5" for ::1 at 2020-08-03 18:59:32 +0200
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:3:in `show'
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/_delete.html.erb (Duration: 0.3ms | Allocations: 155)
+  Rendered exercises/_update.html.erb (Duration: 0.5ms | Allocations: 161)
+  Rendered exercise_nodes/_add_exercise_note.html.erb (Duration: 0.3ms | Allocations: 112)
+  Rendered exercises/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 842)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 15)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 0.3ms | Allocations: 2083)
+
+
+Started GET "/" for ::1 at 2020-08-03 19:10:54 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.2) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.2) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6730005470621617905)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200803170809)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (35.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200803170809"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6730005470621617905)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/rails/actions" for ::1 at 2020-08-03 19:13:00 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6730005470621617905)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6730005470621617905)[0m
+Started GET "/" for ::1 at 2020-08-03 19:13:00 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (1.0ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" ORDER BY "exercises"."created_at" DESC[0m
+  ↳ app/controllers/exercises_controller.rb:12:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  Rendered exercises/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 318)
+  Rendered users/_login.html.erb (Duration: 1.4ms | Allocations: 1769)
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 2110)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 5.1ms | Allocations: 8871)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    12:           <div class="form-group border px-1 py-1">
+    13:             <div class="form-group row">
+    14:               <p class="col-4 text-center mx-2 my-2">Email</p>
+    15:               <input class="form-control text-center col-7 input-unstyled" name="user[email]" type="text" value="<%= @user.email %>" autocomplete="off">
+    16:             </div>
+    17:           </div>
+    18:         </div>
+  
+app/views/users/_login.html.erb:15
+app/views/users/_login.html.erb:10
+app/views/layouts/_header.html.erb:16
+app/views/layouts/application.html.erb:62
+Started GET "/" for ::1 at 2020-08-03 19:13:28 +0200
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" ORDER BY "exercises"."created_at" DESC[0m
+  ↳ app/controllers/exercises_controller.rb:12:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  Rendered exercises/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 314)
+  Rendered users/_login.html.erb (Duration: 0.5ms | Allocations: 199)
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 535)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 0.5ms | Allocations: 3474)
+
+
+Started GET "/" for ::1 at 2020-08-03 19:14:33 +0200
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" ORDER BY "exercises"."created_at" DESC[0m
+  ↳ app/controllers/exercises_controller.rb:12:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  Rendered exercises/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 314)
+  Rendered users/_login.html.erb (Duration: 0.5ms | Allocations: 197)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 533)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 80)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.5ms | Allocations: 3486)
+
+
+Started GET "/" for ::1 at 2020-08-03 19:14:53 +0200
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" ORDER BY "exercises"."created_at" DESC[0m
+  ↳ app/controllers/exercises_controller.rb:12:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  Rendered exercises/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 314)
+  Rendered users/_login.html.erb (Duration: 0.4ms | Allocations: 197)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 533)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 3468)
+
+
+Started GET "/" for ::1 at 2020-08-03 19:14:58 +0200
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" ORDER BY "exercises"."created_at" DESC[0m
+  ↳ app/controllers/exercises_controller.rb:12:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  Rendered exercises/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 314)
+  Rendered users/_login.html.erb (Duration: 0.6ms | Allocations: 197)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 533)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 80)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.4ms | Allocations: 3474)
+
+
+Started GET "/login?user%5Bemail%5D=mat.horniak%40gmail.com" for ::1 at 2020-08-03 19:15:21 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"email"=>"mat.horniak@gmail.com"}}
+Completed 406 Not Acceptable in 3ms (ActiveRecord: 0.0ms | Allocations: 1876)
+
+
+  
+ActionController::MissingExactTemplate (UsersController#login is missing a template for request formats: text/html):
+  
+actionpack (6.0.3.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-08-03 19:19:33 +0200
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" ORDER BY "exercises"."created_at" DESC[0m
+  ↳ app/controllers/exercises_controller.rb:12:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  Rendered exercises/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 50)
+  Rendered users/_login.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 1.7ms | ActiveRecord: 2.5ms | Allocations: 5675)
+
+
+Started GET "/login?user%5Bemail%5D=mat.horniak%40gmail.com" for ::1 at 2020-08-03 19:19:41 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"email"=>"mat.horniak@gmail.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mat.horniak@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms | Allocations: 1509)
+
+
+Started GET "/" for ::1 at 2020-08-03 19:19:41 +0200
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" ORDER BY "exercises"."created_at" DESC[0m
+  ↳ app/controllers/exercises_controller.rb:12:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  Rendered exercises/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 42)
+  Rendered users/_login.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 127)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1473)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-08-03 19:21:29 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" ORDER BY "exercises"."created_at" DESC[0m
+  ↳ app/controllers/exercises_controller.rb:12:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  Rendered exercises/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 462)
+  Rendered users/_login.html.erb (Duration: 0.4ms | Allocations: 212)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 554)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 82)
+Completed 200 OK in 20ms (Views: 5.3ms | ActiveRecord: 4.1ms | Allocations: 8966)
+
+
+Started GET "/login?user%5Bemail%5D=mat.horniak%40gmail.com" for ::1 at 2020-08-03 19:21:37 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"email"=>"mat.horniak@gmail.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mat.horniak@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.8ms | Allocations: 2588)
+
+
+  
+NoMethodError (undefined method `email' for nil:NilClass):
+  
+app/controllers/users_controller.rb:5:in `login'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["email", "mat.horniak@gmail.com"], ["created_at", "2020-08-03 17:23:02.543476"], ["updated_at", "2020-08-03 17:23:02.543476"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/login?user%5Bemail%5D=mat.horniak%40gmail.com" for ::1 at 2020-08-03 19:23:24 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"email"=>"mat.horniak@gmail.com"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mat.horniak@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 6.8ms | Allocations: 4320)
+
+
+Started GET "/" for ::1 at 2020-08-03 19:23:24 +0200
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (1.1ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" ORDER BY "exercises"."created_at" DESC[0m
+  ↳ app/controllers/exercises_controller.rb:12:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  Rendered exercises/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 447)
+  Rendered users/_login.html.erb (Duration: 1.1ms | Allocations: 212)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 554)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 82)
+Completed 200 OK in 21ms (Views: 7.4ms | ActiveRecord: 3.9ms | Allocations: 8321)
+
+

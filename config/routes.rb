@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   post '/add_node' => 'exercise_nodes#add_node', as: 'add_node'
   delete '/delete_node' => 'exercise_nodes#delete_node', as: 'delete_node'
 
+  get '/login' => 'users#login', as: 'login'
+  post '/register' => 'users#register', as: 'register'
+
   # Simple routes
   # (get|post|delete|patch) '/path' => 'controller#method'
   # get '/path/:id' => 'controller#method'
