@@ -47,7 +47,8 @@
                 <input type="hidden" name="series" class="special-width input-unstyled link-unstyled text-center" readonly value="<%= exercise['series'] %>"/>
               </td>
               <td class="w-25">
-                <button type="submit" class="special-width input-unstyled btn btn-error"><i class="material-icons">delete</i></button>
+                <button type="submit" class="special-width input-unstyled btn btn-error">
+                  <i class="material-icons">delete</i></button>
               </td>
             <% end %>
           </tr>
@@ -58,9 +59,14 @@
   <% end %>
   <div class="row  justify-content-center">
     <!--    Button for delete exercise-->
-    <%= form_tag exercise_path { @exercise }, method: :delete, class: "col-3 btn btn-danger mx-1" do %>
-      <button type="submit" class="link-unstyled px-0 py-2 btn btn-danger col-12">Vymazať</button>
-    <% end %>
+    <%#= form_tag exercise_path { @exercise }, method: :delete, class: "col-3 btn btn-danger mx-1" do %>
+<!--      <button type="submit" class="link-unstyled px-0 py-2 btn btn-danger col-12">Vymazať</button>-->
+    <%# end %>
+    <button type="button" class="col-3 btn btn-danger mx-1" data-toggle="modal" data-target="#deleteModal" value="
+      <% @exercise.id %>">
+      Vymazať
+    </button>
+    <%= render 'exercises/delete' %>
 
     <!--    Button for update exercise-->
     <button type="button" class="col-3 btn btn-warning mx-1" data-toggle="modal" data-target="#updateModel" value="

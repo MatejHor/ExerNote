@@ -16473,3 +16473,357 @@ Processing by ExercisesController#show as HTML
 Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 2218)
 
 
+Started GET "/" for ::1 at 2020-08-03 18:44:15 +0200
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (1.7ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" ORDER BY "exercises"."created_at" DESC[0m
+  ↳ app/controllers/exercises_controller.rb:12:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  Rendered exercises/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 462)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 121)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 82)
+Completed 200 OK in 39ms (Views: 8.8ms | ActiveRecord: 13.4ms | Allocations: 8528)
+
+
+Started GET "/exercises/4" for ::1 at 2020-08-03 18:44:21 +0200
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mExercise Load (0.7ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:3:in `show'
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/_update.html.erb (Duration: 1.6ms | Allocations: 433)
+  Rendered exercise_nodes/_add_exercise_note.html.erb (Duration: 1.8ms | Allocations: 284)
+  Rendered exercises/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2353)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 18ms (Views: 9.9ms | ActiveRecord: 1.0ms | Allocations: 4189)
+
+
+Started GET "/exercises/4" for ::1 at 2020-08-03 18:44:56 +0200
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:3:in `show'
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/_update.html.erb (Duration: 1.5ms | Allocations: 422)
+  Rendered exercise_nodes/_add_exercise_note.html.erb (Duration: 1.0ms | Allocations: 282)
+  Rendered exercises/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2282)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 80)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.3ms | Allocations: 4962)
+
+
+Started GET "/exercises/4" for ::1 at 2020-08-03 18:51:13 +0200
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mExercise Load (0.9ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:3:in `show'
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/_delete.html.erb (Duration: 0.8ms | Allocations: 305)
+  Rendered exercises/_update.html.erb (Duration: 1.6ms | Allocations: 421)
+  Rendered exercise_nodes/_add_exercise_note.html.erb (Duration: 1.8ms | Allocations: 281)
+  Rendered exercises/show.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2839)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 80)
+Completed 200 OK in 26ms (Views: 19.0ms | ActiveRecord: 1.6ms | Allocations: 5660)
+
+
+Started GET "/exercises/4" for ::1 at 2020-08-03 18:51:21 +0200
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:3:in `show'
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/_delete.html.erb (Duration: 1.9ms | Allocations: 302)
+  Rendered exercises/_update.html.erb (Duration: 2.5ms | Allocations: 421)
+  Rendered exercise_nodes/_add_exercise_note.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered exercises/show.html.erb within layouts/application (Duration: 13.2ms | Allocations: 2667)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 80)
+Completed 200 OK in 27ms (Views: 21.4ms | ActiveRecord: 0.5ms | Allocations: 5370)
+
+
+Started GET "/exercises/4" for ::1 at 2020-08-03 18:52:07 +0200
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:3:in `show'
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/_delete.html.erb (Duration: 0.6ms | Allocations: 304)
+  Rendered exercises/_update.html.erb (Duration: 0.8ms | Allocations: 421)
+  Rendered exercise_nodes/_add_exercise_note.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered exercises/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2672)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.5ms | Allocations: 5362)
+
+
+Started GET "/exercises/4" for ::1 at 2020-08-03 18:52:23 +0200
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:3:in `show'
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/_delete.html.erb (Duration: 1.1ms | Allocations: 302)
+  Rendered exercises/_update.html.erb (Duration: 1.5ms | Allocations: 421)
+  Rendered exercise_nodes/_add_exercise_note.html.erb (Duration: 1.3ms | Allocations: 281)
+  Rendered exercises/show.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2667)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.5ms | Allocations: 5356)
+
+
+Started GET "/exercises/4" for ::1 at 2020-08-03 18:52:45 +0200
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mExercise Load (0.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:3:in `show'
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/_delete.html.erb (Duration: 0.9ms | Allocations: 301)
+  Rendered exercises/_update.html.erb (Duration: 1.3ms | Allocations: 421)
+  Rendered exercise_nodes/_add_exercise_note.html.erb (Duration: 0.7ms | Allocations: 281)
+  Rendered exercises/show.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2662)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 80)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.6ms | Allocations: 5335)
+
+
+Started DELETE "/exercises/4" for ::1 at 2020-08-03 18:52:50 +0200
+Processing by ExercisesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+7IqwdMAgiUllCddCoBc/drEfFStsHo0GsKEDio4TbnXW2WgsPNr25XRasLg5a30W49+DKH9NPamVNaqfkyTeA==", "id"=>"4"}
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:32:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/exercises_controller.rb:32:in `destroy'
+  [1m[36mExercise Destroy (0.3ms)[0m  [1m[31mDELETE FROM "exercises" WHERE "exercises"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/exercises_controller.rb:32:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/exercises_controller.rb:32:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms | Allocations: 2860)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:52:50 +0200
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" ORDER BY "exercises"."created_at" DESC[0m
+  ↳ app/controllers/exercises_controller.rb:12:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  Rendered exercises/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 283)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1719)
+
+
+Started GET "/exercises/new" for ::1 at 2020-08-03 18:53:00 +0200
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 269)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 117)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 2344)
+
+
+Started POST "/exercises" for ::1 at 2020-08-03 18:53:08 +0200
+Processing by ExercisesController#create as HTML
+  Parameters: {"authenticity_token"=>"QoDO/BQidYN9yjg6osi2bn2uyy666ZK0sK3l7FljeUxB67pTKEMN3ivcsAuY5Fe37shqb9n07J+/aaT3DqPqeA==", "exercise"=>{"title"=>"Cvicenie", "created_at"=>"2020-08-11", "time"=>"20", "distance"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/exercises_controller.rb:26:in `create'
+  [1m[36mExercise Create (3.1ms)[0m  [1m[32mINSERT INTO "exercises" ("title", "time", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Cvicenie"], ["time", "20"], ["created_at", "2020-08-11 00:00:00"], ["updated_at", "2020-08-03 16:53:08.036249"]]
+  ↳ app/controllers/exercises_controller.rb:26:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/exercises_controller.rb:26:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 3.6ms | Allocations: 2923)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:53:08 +0200
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" ORDER BY "exercises"."created_at" DESC[0m
+  ↳ app/controllers/exercises_controller.rb:12:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  Rendered exercises/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 315)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1777)
+
+
+Started GET "/exercises/new" for ::1 at 2020-08-03 18:53:10 +0200
+Processing by ExercisesController#new as HTML
+  Rendering exercises/new.html.erb within layouts/application
+  Rendered exercises/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 121)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 772)
+
+
+Started POST "/exercises" for ::1 at 2020-08-03 18:53:15 +0200
+Processing by ExercisesController#create as HTML
+  Parameters: {"authenticity_token"=>"VPtCvkFB/x9PA+mgylj1DdhT18nIPj7hIMYKgz8A8qhXkDYRfSCHQhkVYZHwdBTUSzV2iKsjQMovAkuYaMBhnA==", "exercise"=>{"title"=>"Cvicenie", "created_at"=>"2020-08-21", "time"=>"111111", "distance"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/exercises_controller.rb:26:in `create'
+  [1m[36mExercise Create (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("title", "time", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Cvicenie"], ["time", "111111"], ["created_at", "2020-08-21 00:00:00"], ["updated_at", "2020-08-03 16:53:15.376013"]]
+  ↳ app/controllers/exercises_controller.rb:26:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/exercises_controller.rb:26:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms | Allocations: 2753)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:53:15 +0200
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" ORDER BY "exercises"."created_at" DESC[0m
+  ↳ app/controllers/exercises_controller.rb:12:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  Rendered exercises/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 71)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 1431)
+
+
+Started GET "/exercises/6" for ::1 at 2020-08-03 18:53:18 +0200
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:3:in `show'
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/_delete.html.erb (Duration: 1.1ms | Allocations: 312)
+  Rendered exercises/_update.html.erb (Duration: 1.0ms | Allocations: 421)
+  Rendered exercise_nodes/_add_exercise_note.html.erb (Duration: 0.8ms | Allocations: 281)
+  Rendered exercises/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2290)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.3ms | Allocations: 3644)
+
+
+Started POST "/add_node" for ::1 at 2020-08-03 18:53:52 +0200
+Processing by ExerciseNodesController#add_node as HTML
+  Parameters: {"authenticity_token"=>"Unq3QFIQTdkhFkygO4shAmwmVK4fpg2OsiUTrZEFpiQ9RSUC9noJldf6rWXbKOLsTyQJKsbvFZzgITyuMp+2Ug==", "id"=>"6", "title"=>"sad", "weight"=>"213", "series"=>"qw1d"}
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/exercise_nodes_controller.rb:4:in `add_node'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/exercise_nodes_controller.rb:15:in `add_node'
+  [1m[36mExercise Update (0.5ms)[0m  [1m[33mUPDATE "exercises" SET "exercises" = $1, "updated_at" = $2 WHERE "exercises"."id" = $3[0m  [["exercises", "[{\"title\":\"sad\",\"weight\":\"213\",\"series\":\"qw1d\"}]"], ["updated_at", "2020-08-03 16:53:52.433868"], ["id", 6]]
+  ↳ app/controllers/exercise_nodes_controller.rb:15:in `add_node'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/exercise_nodes_controller.rb:15:in `add_node'
+Redirected to http://localhost:3000/exercises/6
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms | Allocations: 3238)
+
+
+Started GET "/exercises/6" for ::1 at 2020-08-03 18:53:52 +0200
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:3:in `show'
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/_delete.html.erb (Duration: 0.3ms | Allocations: 155)
+  Rendered exercises/_update.html.erb (Duration: 0.3ms | Allocations: 161)
+  Rendered exercise_nodes/_add_exercise_note.html.erb (Duration: 0.3ms | Allocations: 112)
+  Rendered exercises/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 842)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 2069)
+
+
+Started DELETE "/delete_node" for ::1 at 2020-08-03 18:53:53 +0200
+Processing by ExerciseNodesController#delete_node as HTML
+  Parameters: {"authenticity_token"=>"/0O9Q3L7z5UEttoDQZE2Ivbq171elh4yUQB6dMx9Ybb7qU+Iz3hQlr0nGcuQaRs4TFQvTuVor5/XagMiHdLLHQ==", "id"=>"6", "title"=>"sad", "weight"=>"213", "series"=>"qw1d"}
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/exercise_nodes_controller.rb:22:in `delete_node'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/exercise_nodes_controller.rb:37:in `delete_node'
+  [1m[36mExercise Update (0.4ms)[0m  [1m[33mUPDATE "exercises" SET "exercises" = $1, "updated_at" = $2 WHERE "exercises"."id" = $3[0m  [["exercises", "[]"], ["updated_at", "2020-08-03 16:53:53.938612"], ["id", 6]]
+  ↳ app/controllers/exercise_nodes_controller.rb:37:in `delete_node'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/exercise_nodes_controller.rb:37:in `delete_node'
+Redirected to http://localhost:3000/exercises/6
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms | Allocations: 3179)
+
+
+Started GET "/exercises/6" for ::1 at 2020-08-03 18:53:53 +0200
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:3:in `show'
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/_delete.html.erb (Duration: 0.3ms | Allocations: 164)
+  Rendered exercises/_update.html.erb (Duration: 0.2ms | Allocations: 161)
+  Rendered exercise_nodes/_add_exercise_note.html.erb (Duration: 0.1ms | Allocations: 112)
+  Rendered exercises/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 657)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1880)
+
+
+Started DELETE "/exercises/6" for ::1 at 2020-08-03 18:53:56 +0200
+Processing by ExercisesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mb526lypGTiJ+LWdRRRNEsZ04hKqh8kwXZG1j0H+Y/I2cX8JNTP9wjmbVAWTVU2VbvJJdKMIi0fLyLtdwEG4FA==", "id"=>"6"}
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:32:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/exercises_controller.rb:32:in `destroy'
+  [1m[36mExercise Destroy (0.3ms)[0m  [1m[31mDELETE FROM "exercises" WHERE "exercises"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/exercises_controller.rb:32:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/exercises_controller.rb:32:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms | Allocations: 2785)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:53:56 +0200
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" ORDER BY "exercises"."created_at" DESC[0m
+  ↳ app/controllers/exercises_controller.rb:12:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  Rendered exercises/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1353)
+
+
+Started GET "/exercises/5" for ::1 at 2020-08-03 18:53:58 +0200
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:3:in `show'
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/_delete.html.erb (Duration: 0.5ms | Allocations: 164)
+  Rendered exercises/_update.html.erb (Duration: 0.6ms | Allocations: 161)
+  Rendered exercise_nodes/_add_exercise_note.html.erb (Duration: 0.3ms | Allocations: 112)
+  Rendered exercises/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 657)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 1870)
+
+
+Started GET "/" for ::1 at 2020-08-03 18:54:06 +0200
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" ORDER BY "exercises"."created_at" DESC[0m
+  ↳ app/controllers/exercises_controller.rb:12:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  Rendered exercises/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1357)
+
+
+Started GET "/exercises/5" for ::1 at 2020-08-03 18:54:07 +0200
+Processing by ExercisesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/exercises_controller.rb:3:in `show'
+  Rendering exercises/show.html.erb within layouts/application
+  Rendered exercises/_delete.html.erb (Duration: 0.6ms | Allocations: 164)
+  Rendered exercises/_update.html.erb (Duration: 0.5ms | Allocations: 161)
+  Rendered exercise_nodes/_add_exercise_note.html.erb (Duration: 0.3ms | Allocations: 112)
+  Rendered exercises/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 657)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 1870)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6730005470621617905)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6730005470621617905)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
