@@ -6,11 +6,19 @@
       <li><a class="navbar-brand" href="<%= new_exercise_path %>">Pridať</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li>
-        <button type="button" class="input-unstyled navbar-brand" data-toggle="modal" data-target="#loginModal">
-          Prihlasiť sa
-        </button>
-      </li>
+      <% if session[:user] %>
+        <li>
+          <button type="button" class="input-unstyled navbar-brand" data-toggle="modal" data-target="#logoutModal">
+            <%= session[:user]["email"] %>
+          </button>
+        </li>
+      <% else %>
+        <li>
+          <button type="button" class="input-unstyled navbar-brand" data-toggle="modal" data-target="#loginModal">
+            Prihlasiť sa
+          </button>
+        </li>
+      <% end %>
     </ul>
 
     <%= render 'users/login' %>

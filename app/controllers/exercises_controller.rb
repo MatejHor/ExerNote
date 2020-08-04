@@ -7,7 +7,13 @@ class ExercisesController < ApplicationController
 
   def index
     @exercises_day = []
-    db_exercise = Exercise.order(created_at: :desc).all
+    user = session[:user]
+    if user == nil
+      db_exercise = [] #Exercise.order(created_at: :desc).all
+    else
+      db_exercise = Exercise.where(:user_id == user[:id]).order(created_at: :desc).all
+    end
+
     exercises = []
     (1..db_exercise.length).each do |i|
       exercises.push(db_exercise[i - 1])
@@ -44,7 +50,7 @@ class ExercisesController < ApplicationController
     if params[:exercise][:distance].eql? ""
       params[:exercise][:distance] = nil
     end
-    params.require(:exercise).permit(:title, :time, :created_at, :distance)
+    params.require(:exercise).permit(:title, :time, :created_at, :distance, :user_id)
   end
 
   def parse_json(json)
