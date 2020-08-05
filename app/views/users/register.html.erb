@@ -1,0 +1,13 @@
+<div class="mx-1 px-1 my-1 py-1">
+  <%= form_tag create_path, method: :post, class: "" do %>
+    <div class="form-group border px-3 py-3 my-5 mx-5">
+      <div class="row">
+        <p class="col-4 text-center mx-2 my-2 py-2">Email</p>
+        <input type="text" class="col-7 text-center input-unstyled" name="user[email]" autocomplete="off"/>
+      </div>
+    </div>
+    <div class="row  justify-content-center">
+      <button type="submit" class="col-5 btn btn-success mx-1">Registrovať sa</button>
+    </div>
+  <% end %>
+</div>

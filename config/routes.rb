@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   delete '/delete_node' => 'exercise_nodes#delete_node', as: 'delete_node'
 
   get '/login' => 'users#login', as: 'login'
-  post '/register' => 'users#register', as: 'register'
+  post '/create' => 'users#create', as: 'create'
+  get '/register' => 'users#register', as: 'register'
+  get '/logout' => 'users#logout', as: 'logout'
 
   # Simple routes
   # (get|post|delete|patch) '/path' => 'controller#method'

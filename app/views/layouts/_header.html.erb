@@ -8,9 +8,7 @@
     <ul class="nav navbar-nav navbar-right">
       <% if session[:user] %>
         <li>
-          <button type="button" class="input-unstyled navbar-brand" data-toggle="modal" data-target="#logoutModal">
-            <%= session[:user]["email"] %>
-          </button>
+          <a class="navbar-brand" href="<%= logout_path %>"><%= session[:user]["email"] %></a>
         </li>
       <% else %>
         <li>

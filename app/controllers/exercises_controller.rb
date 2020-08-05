@@ -11,7 +11,7 @@ class ExercisesController < ApplicationController
     if user == nil
       db_exercise = [] #Exercise.order(created_at: :desc).all
     else
-      db_exercise = Exercise.where(:user_id == user[:id]).order(created_at: :desc).all
+      db_exercise = Exercise.where(user_id: user['id']).order(created_at: :desc).all
     end
 
     exercises = []
