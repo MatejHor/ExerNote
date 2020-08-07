@@ -11,6 +11,15 @@ module ExerNote
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
+    # Where the I18n library should search for translation files
+    config.i18n.load_path += Dir[Rails.root.join('lib', 'locale', '*.{rb,yml}')]
+
+    # Permitted locales available for the application
+    config.i18n.available_locales = [:sk, :en]
+
+    # Set default locale to something other than :en
+    config.i18n.default_locale = :sk
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading

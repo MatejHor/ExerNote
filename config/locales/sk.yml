@@ -1,0 +1,51 @@
+sk:
+  # Header
+  main_title: "Exernote - aplikácia pre ukladanie a prehladávanie denných cvikov"
+  list: "Zoznam"
+  add: "Pridať"
+  close: "Zavrieť"
+
+  # List
+  none: "Žiadne cvičenie nie je k dispozícií"
+
+  # Add
+  save: "Uložiť"
+
+  # Detail
+  action: "Akcia"
+  update: "Upraviť"
+  add_note: "Vložiť cvik"
+  delete: "Vymazať"
+
+  # Update
+  update_exercise: "Upraviť cvičenie"
+
+  # Delete
+  delete_description: "Naozaj odstrániť toto cvičenie?"
+  delete_exercise: "Vymazať cvičenie"
+
+  # Login
+  login_description: "Nemáš účet? nevadí "
+  register_desription: "zaregistruj sa!"
+  register: "Registrovať sa"
+  login: "Prihlásiť sa"
+
+  # Users
+  nick: "Prezývka"
+  email: "Email"
+  name: "Meno"
+  password: "Heslo"
+
+  # Exercise
+  exercise: "Cvičenie"
+  title: "Názov"
+  weight: "Váha"
+  series: "Opak."
+  date: "Dátum"
+  time: "Čas"
+  exer_node: "Cvik"
+  exer_node_name: "Názov cviku"
+  distance: "Vzdialenosť"
+
+
+

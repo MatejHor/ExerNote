@@ -3,17 +3,17 @@
     <%= form_tag exercise_path { @exercise }, method: :delete, class: "" do %>
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Vymazať cvičenie</h5>
+          <h5 class="modal-title" id="exampleModalLabel"><%= t('delete_exercise') %></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          Naozaj vymazať toto cvicečenie?
+          <%= t('delete_description') %>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvoriť</button>
-          <button type="submit" class="btn btn-danger">Naozaj vymazať</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"><%= t('close') %></button>
+          <button type="submit" class="btn btn-danger"><%= t('delete') %></button>
         </div>
       </div>
     <% end %>

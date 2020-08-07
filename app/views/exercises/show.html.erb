@@ -4,16 +4,16 @@
   </div>
   <div class="form-group border px-1 py-1">
     <div class="row">
-      <p class="col-6 text-center">Dátum</p>
+      <p class="col-6 text-center"><%= t('date') %></p>
       <p class="col-6 text-center"><%= @exercise.created_at.strftime("%d.%m.%Y") %></p>
     </div>
     <div class="row">
-      <p class="col-6 text-center">Čas</p>
+      <p class="col-6 text-center"><%= t('time') %></p>
       <p class="col-6 text-center"><%= @exercise.time %> min</p>
     </div>
     <% if @exercise.distance %>
       <div class="row">
-        <p class="col-6 text-center">Vzdialenosť</p>
+        <p class="col-6 text-center"><%= t('distance') %></p>
         <p class="col-6 text-center"><%= @exercise.distance %> km</p>
       </div>
     <% end %>
@@ -23,10 +23,10 @@
       <table class="table text-center">
         <thead class="thead-dark">
         <tr>
-          <th scope="col" class="w-35">Cvik</th>
-          <th scope="col" class="w-15">Váha</th>
-          <th scope="col" class="w-25">Opak.</th>
-          <th scope="col" class="w-25">Akcia</th>
+          <th scope="col" class="w-35"><%= t('exer_node') %></th>
+          <th scope="col" class="w-15"><%= t('weight') %></th>
+          <th scope="col" class="w-25"><%= t('series') %></th>
+          <th scope="col" class="w-25"><%= t('action') %></th>
         </tr>
         </thead>
         <tbody>
@@ -64,14 +64,14 @@
     <%# end %>
     <button type="button" class="col-3 btn btn-danger mx-1" data-toggle="modal" data-target="#deleteModal" value="
       <% @exercise.id %>">
-      Vymazať
+      <%= t('delete') %>
     </button>
     <%= render 'exercises/delete' %>
 
     <!--    Button for update exercise-->
     <button type="button" class="col-3 btn btn-warning mx-1" data-toggle="modal" data-target="#updateModel" value="
         <% @exercise.id %>">
-      Upraviť
+      <%= t('update') %>
     </button>
     <!--    Popup window for update exercise-->
     <%= render 'exercises/update' %>
@@ -80,7 +80,7 @@
     <% unless @exercise.distance %>
       <button type="button" class="col-3 btn btn-info mx-1" data-toggle="modal" data-target="#addNodeModal" value="
         <% @exercise.id %>">
-        Vložiť cvik
+        <%= t('add_note') %>
       </button>
       <!--    Popup window for add new exercise node-->
       <%= render 'exercise_nodes/add_exercise_note' %>

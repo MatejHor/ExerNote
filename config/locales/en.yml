@@ -30,4 +30,53 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  # Header
+  main_title: "ExerNote - application for storing and browsing daily exercise"
+  list: "List"
+  add: "Add"
+  close: "Close"
+
+  # List
+  none: "Any exercise are avalaible"
+
+  # Add
+  save: "Save"
+
+  # Detail
+  action: "Action"
+  update: "Update"
+  add_note: "Add exercise"
+  delete: "Delete"
+
+  # Update
+  update_exercise: "Update exercise"
+
+  # Delete
+  delete_description: "Really delete this exercise?"
+  delete_exercise: "Delete exercise"
+
+  # Login
+  login_description: "You don't have account? never mind "
+  register_desription: "sign up!"
+  register: "Sign up"
+  login: "Sign in"
+
+  # Users
+  nick: "Nick"
+  email: "Email"
+  name: "Name"
+  password: "Password"
+
+  # Exercise
+  exercise: "Exercise"
+  title: "Title"
+  weight: "Weight"
+  series: "Series"
+  date: "Date"
+  time: "Time"
+  exer_node: "Execise"
+  exer_node_name: "Exercise name"
+  distance: "Distance"
+
+
+

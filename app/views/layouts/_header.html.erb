@@ -2,18 +2,18 @@
   <nav class="navbar navbar-inverse navbar-dark  bg-dark">
 
     <ul class="nav navbar-left">
-      <li><a class="navbar-brand" href="/">Zoznam</a></li>
-      <li><a class="navbar-brand" href="<%= new_exercise_path %>">Pridať</a></li>
+      <li><a class="navbar-brand" href="/"><%= t('list') %></a></li>
+      <li><a class="navbar-brand" href="<%= new_exercise_path %>"><%= t('add') %></a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <% if session[:user] %>
         <li>
-          <a class="navbar-brand" href="<%= logout_path %>"><%= session[:user]["email"] %></a>
+          <a class="navbar-brand" href="<%= logout_path %>"><%= session[:user]["nick"] %></a>
         </li>
       <% else %>
         <li>
           <button type="button" class="input-unstyled navbar-brand" data-toggle="modal" data-target="#loginModal">
-            Prihlasiť sa
+            <%= t('login') %>
           </button>
         </li>
       <% end %>

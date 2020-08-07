@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def login
-    user = User.where(email: params[:user][:email]).first
+    user = User.where(nick: params[:user][:nick]).first
     if user
       session[:user] = user
     end
@@ -12,8 +12,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    User.create(email: params[:user][:email])
-    user = User.where(email: params[:user][:email]).first
+    User.create(exercise_params)
+    user = User.where(nick: params[:user][:nick]).first
     session[:user] = user
     redirect_to root_path
   end
@@ -21,6 +21,12 @@ class UsersController < ApplicationController
   def logout
     session[:user] = nil
     redirect_to root_path
+  end
+
+  private
+
+  def exercise_params
+    params.require(:exercise).permit(:nick, :name, :email, :password)
   end
 
 end
