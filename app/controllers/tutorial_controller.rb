@@ -7,13 +7,13 @@ class TutorialController < ApplicationController
   end
 
   def create_mailer
+    # Generate mailer, views, test
     # rails g mailer <mailer-name> <method>
-    # generate mailer, views, test
   end
 
   def create_full_resources
+    # Generate controller, model, db migration, update routes, helpers
     # rails g resource <resource-name> <attributes>
-    # generate controller, model, db migration, update routes, helpers
   end
 
   def helper
@@ -32,7 +32,7 @@ class TutorialController < ApplicationController
   end
 
   def test
-    # to run test
+    # To run test
     # rake test
   end
 
@@ -49,7 +49,7 @@ class TutorialController < ApplicationController
     # Open heroku app
     # heroku open
 
-    # Open enviroment on heroku
+    # Open environment on heroku
     # heroku config:set Key=value
 
     # Run heroku rails console
