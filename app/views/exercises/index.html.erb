@@ -17,7 +17,12 @@
     <% if @exercises_day.empty? %>
       <div class="alert alert-info"><%= t('none') %></div>
     <% end %>
+
+    <div class="apple_pagination">
+      <%= will_paginate @exercises, :container => false %>
+    </div>
   </div>
+
 </div>
 
 

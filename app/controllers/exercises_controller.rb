@@ -8,21 +8,23 @@ class ExercisesController < ApplicationController
   def index
     @exercises_day = []
     user = session[:user]
-    if user == nil
-      db_exercise = [] #Exercise.order(created_at: :desc).all
-    else
-      db_exercise = Exercise.where(user_id: user['id']).order(created_at: :desc).all
-    end
 
-    exercises = []
-    (1..db_exercise.length).each do |i|
-      exercises.push(db_exercise[i - 1])
-      date = db_exercise[i - 1].created_at.strftime('%d.%m.%Y')
-      if (db_exercise[i].equal? nil) || (!date.eql? db_exercise[i].created_at.strftime('%d.%m.%Y'))
-        @exercises_day.push(exercises)
-        exercises = []
+    if user == nil
+      @exercises = Exercise.where(user_id: 0).order(created_at: :desc).paginate(page: params[:page])
+    else
+
+      @exercises = Exercise.where(user_id: user['id']).order(created_at: :desc).paginate(page: params[:page])
+      exercises = []
+      (1..@exercises.length).each do |i|
+        exercises.push(@exercises[i - 1])
+        date = @exercises[i - 1].created_at.strftime('%d.%m.%Y')
+        if (@exercises[i].equal? nil) || (!date.eql? @exercises[i].created_at.strftime('%d.%m.%Y'))
+          @exercises_day.push(exercises)
+          exercises = []
+        end
       end
     end
+
   end
 
   def new
@@ -34,7 +36,6 @@ class ExercisesController < ApplicationController
   end
 
   def destroy
-    puts 'Removing ' + params[:id]
     Exercise.destroy(params[:id])
     redirect_to root_path
   end
