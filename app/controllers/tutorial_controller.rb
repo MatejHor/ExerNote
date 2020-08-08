@@ -60,6 +60,9 @@ class TutorialController < ApplicationController
 
     # Info about db
     # heroku pg:info
+
+    # Add css into production
+    # heroku run rake assets:precompile RAILS_ENV=production
   end
 
 end
