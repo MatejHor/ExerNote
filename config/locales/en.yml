@@ -36,6 +36,8 @@ en:
   add: "Add"
   close: "Close"
   language: "Language"
+  next: "Next"
+  previous: "Previous"
 
   # List
   none: "Any exercise are avalaible"

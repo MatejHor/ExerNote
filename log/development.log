@@ -23949,3 +23949,81 @@ Processing by ExercisesController#index as HTML
 Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.6ms | Allocations: 5482)
 
 
+Started GET "/" for ::1 at 2020-08-08 23:32:15 +0200
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ExercisesController#index as HTML
+  Rendering exercises/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercises" WHERE "exercises"."user_id" = $1[0m  [["user_id", 0]]
+  ↳ app/views/exercises/index.html.erb:22
+  Rendered exercises/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 4758)
+  Rendered users/_login.html.erb (Duration: 11.4ms | Allocations: 426)
+  Rendered layouts/_header.html.erb (Duration: 14.2ms | Allocations: 990)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 200)
+Completed 200 OK in 165ms (Views: 152.0ms | ActiveRecord: 2.3ms | Allocations: 35766)
+
+
+Started GET "/login?user%5Bnick%5D=admin" for ::1 at 2020-08-08 23:32:21 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"admin"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["nick", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 6.1ms | Allocations: 2624)
+
+
+Started GET "/" for ::1 at 2020-08-08 23:32:21 +0200
+Processing by ExercisesController#index as HTML
+  Rendering exercises/index.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercises" WHERE "exercises"."user_id" = $1[0m  [["user_id", 0]]
+  ↳ app/views/exercises/index.html.erb:22
+  Rendered exercises/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 766)
+  Rendered users/_login.html.erb (Duration: 0.3ms | Allocations: 155)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 297)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.7ms | Allocations: 4242)
+
+
+Started GET "/login?user%5Bnick%5D=admin" for ::1 at 2020-08-08 23:32:28 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"admin"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["nick", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms | Allocations: 1050)
+
+
+Started GET "/" for ::1 at 2020-08-08 23:32:28 +0200
+Processing by ExercisesController#index as HTML
+  Rendering exercises/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercises" WHERE "exercises"."user_id" = $1[0m  [["user_id", 0]]
+  ↳ app/views/exercises/index.html.erb:22
+  Rendered exercises/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 765)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 154)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 292)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.6ms | Allocations: 4223)
+
+
+Started GET "/login?user%5Bnick%5D=mat.horniak%40gmail.com" for ::1 at 2020-08-08 23:32:32 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mat.horniak@gmail.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["nick", "mat.horniak@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `login'
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.3ms | Allocations: 4643)
+
+
+Started GET "/" for ::1 at 2020-08-08 23:32:32 +0200
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."user_id" = $1 ORDER BY "exercises"."created_at" DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/exercises_controller.rb:18:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercises" WHERE "exercises"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/exercises/index.html.erb:22
+  Rendered exercises/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1524)
+  Rendered users/_login.html.erb (Duration: 0.3ms | Allocations: 154)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 30ms (Views: 13.8ms | ActiveRecord: 1.9ms | Allocations: 9777)
+
+

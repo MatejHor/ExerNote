@@ -5,6 +5,8 @@ sk:
   add: "Pridať"
   close: "Zavrieť"
   language: "Jazyk"
+  next: "Ďalšia"
+  previous: "Predošlá"
 
   # List
   none: "Žiadne cvičenie nie je k dispozícií"
