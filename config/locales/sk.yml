@@ -4,6 +4,7 @@ sk:
   list: "Zoznam"
   add: "Pridať"
   close: "Zavrieť"
+  language: "Jazyk"
 
   # List
   none: "Žiadne cvičenie nie je k dispozícií"
