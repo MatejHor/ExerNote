@@ -1,4 +1,4 @@
 class Exercise < ApplicationRecord
-  self.per_page = 5
+  self.per_page = 10
   belongs_to :user
 end
