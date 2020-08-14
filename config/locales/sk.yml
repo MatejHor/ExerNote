@@ -10,7 +10,7 @@ sk:
 
   # List
   none: "Žiadne cvičenie nie je k dispozícií"
-  auth_description: "Pre ďalšie používanie je potrebné sa prihlásiť alebo registrovať! "
+  auth_description: "Pre ďalšie používanie je potrebné sa prihlásiť alebo sa registrovať! "
 
   # Add
   save: "Uložiť"

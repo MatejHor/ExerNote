@@ -10,12 +10,11 @@ class UsersController < ApplicationController
   def create
     User.create(user_params)
     login_user params[:user][:nick]
-    redirect_to root_path
   end
 
   def logout
     warden.logout
-    redirect_to root_path
+    redirect_to home_path
   end
 
   private
@@ -33,7 +32,7 @@ class UsersController < ApplicationController
     if user
       warden.set_user(user)
       warden.authenticate!
+      redirect_to root_path
     end
-    redirect_to root_path
   end
 end

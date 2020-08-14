@@ -69,6 +69,12 @@ class TutorialController < ApplicationController
 
     # Add css into production
     # heroku run rake assets:precompile RAILS_ENV=production
+
+    # Create backup in heroku
+    # heroku pg:backups:capture
+
+    # Download backup from heroku
+    # heroku pg:backups:download
   end
 
 end
