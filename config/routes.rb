@@ -8,9 +8,7 @@ Rails.application.routes.draw do
   get '/register' => 'users#register', as: 'register'
   get '/logout' => 'users#logout', as: 'logout'
 
-  # Simple routes
-  # (get|post|delete|patch) '/path' => 'controller#method'
-  # get '/path/:id' => 'controller#method'
+  get '/home' => 'home#index', as: 'home'
 
   root 'exercises#index'
 end

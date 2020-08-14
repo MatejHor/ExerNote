@@ -1,10 +1,6 @@
 class UsersController < ApplicationController
   def login
-    user = User.where(nick: params[:user][:nick]).first
-    if user
-      session[:user] = user
-    end
-    redirect_to root_path
+    login_user params[:user][:nick]
   end
 
   def register
@@ -13,20 +9,31 @@ class UsersController < ApplicationController
 
   def create
     User.create(user_params)
-    user = User.where(nick: params[:user][:nick]).first
-    session[:user] = user
+    login_user params[:user][:nick]
     redirect_to root_path
   end
 
   def logout
-    session[:user] = nil
+    warden.logout
     redirect_to root_path
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:nick, :name, :email, :password)
+    params.require(:user).permit(:nick, :name, :email, :password_digest)
   end
 
+  def warden
+    request.env['warden']
+  end
+
+  def login_user(nick)
+    user = User.where(nick: nick).first
+    if user
+      warden.set_user(user)
+      warden.authenticate!
+    end
+    redirect_to root_path
+  end
 end

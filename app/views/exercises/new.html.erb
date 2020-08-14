@@ -1,6 +1,6 @@
 <div class="mx-1 px-1 my-1 py-1">
   <%= form_tag exercises_path, method: :post, class: "" do %>
-    <input type="hidden" value="<%= session[:user] ? session[:user]["id"] : 0 %>" name="exercise[user_id]"/>
+    <input type="hidden" value="<%= request.env['warden'].user ? request.env['warden'].user['id'] : 0 %>" name="exercise[user_id]"/>
     <div class="form-group row">
       <input class="input-unstyled form-control mx-5 text-center h2" type="text" name="exercise[title]" value="Cvicenie" autocomplete="off"/>
     </div>

@@ -1,19 +1,17 @@
 class ExercisesController < ApplicationController
+  include WardenHelper
   def show
     @exercise = Exercise.find(params[:id])
     @exercise.exercises = parse_json @exercise.exercises
+
     render
   end
 
   def index
     @exercises_day = []
-    user = session[:user]
 
-    if user == nil
-      @exercises = Exercise.where(user_id: 0).order(created_at: :desc).paginate(page: params[:page])
-    else
-
-      @exercises = Exercise.where(user_id: user['id']).order(created_at: :desc).paginate(page: params[:page])
+    if signed_in?
+      @exercises = Exercise.where(user_id: current_user['id']).order(created_at: :desc).paginate(page: params[:page])
       exercises = []
       (1..@exercises.length).each do |i|
         exercises.push(@exercises[i - 1])
@@ -23,6 +21,8 @@ class ExercisesController < ApplicationController
           exercises = []
         end
       end
+    else
+      @exercises = Exercise.where(user_id: 0).order(created_at: :desc).paginate(page: params[:page])
     end
 
   end

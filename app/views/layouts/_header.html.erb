@@ -2,13 +2,13 @@
   <nav class="navbar navbar-inverse navbar-dark  bg-dark">
 
     <ul class="nav navbar-left">
-      <li><a class="navbar-brand" href="/"><%= t('list') %></a></li>
+      <li><a class="navbar-brand" href="<%= exercises_path %>"><%= t('list') %></a></li>
       <li><a class="navbar-brand" href="<%= new_exercise_path %>"><%= t('add') %></a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <% if session[:user] %>
+      <% if request.env['warden'].user %>
         <li>
-          <a class="navbar-brand" href="<%= logout_path %>"><%= session[:user]["nick"] %></a>
+          <a class="navbar-brand" href="<%= logout_path %>"><%= request.env['warden'].user["nick"] %></a>
         </li>
       <% else %>
         <li>

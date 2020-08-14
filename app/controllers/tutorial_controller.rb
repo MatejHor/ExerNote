@@ -6,6 +6,12 @@ class TutorialController < ApplicationController
     object_attribute = session[:object_attribute]
   end
 
+  def routes
+    # Simple routes
+    # (get|post|delete|patch) '/path' => 'controller#method'
+    # get '/path/:id' => 'controller#method'
+  end
+
   def create_mailer
     # Generate mailer, views, test
     # rails g mailer <mailer-name> <method>

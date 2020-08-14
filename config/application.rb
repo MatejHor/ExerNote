@@ -24,5 +24,11 @@ module ExerNote
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    # Add Warden in the middleware stack
+    config.middleware.insert_after ActionDispatch::Flash, Warden::Manager do |manager|
+      manager.default_strategies :authentication_token
+      manager.failure_app = UnauthorizedController
+    end
   end
 end

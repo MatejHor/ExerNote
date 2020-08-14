@@ -28,6 +28,10 @@ gem 'rails-i18n'
 # Pagination
 gem 'will_paginate', '~> 3.1.0'
 
+# Middleware for authentication
+gem 'warden'
+gem 'bcrypt'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

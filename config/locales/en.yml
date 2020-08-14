@@ -36,11 +36,12 @@ en:
   add: "Add"
   close: "Close"
   language: "Language"
-  next: "Next"
-  previous: "Previous"
+  next: "Next page"
+  previous: "Previous page"
 
   # List
   none: "Any exercise are avalaible"
+  auth_description: "You must log in or register for further use! "
 
   # Add
   save: "Save"

@@ -13,10 +13,10 @@
         <p class="col-4 text-center mx-2 my-2 py-2"><%= t('email') %></p>
         <input type="text" class="col-7 text-center input-unstyled" name="user[email]" autocomplete="off"/>
       </div>
-<!--      <div class="row">-->
-<!--        <p class="col-4 text-center mx-2 my-2 py-2">Heslo</p>-->
-<!--        <input type="text" class="col-7 text-center input-unstyled" name="user[password]" autocomplete="off"/>-->
-<!--      </div>-->
+      <div class="row">
+        <p class="col-4 text-center mx-2 my-2 py-2"><%= t('password') %></p>
+        <input type="password" class="col-7 text-center input-unstyled" name="user[password_digest]" autocomplete="off"/>
+      </div>
     </div>
     <div class="row  justify-content-center">
       <button type="submit" class="col-5 btn btn-success mx-1"><%= t('register') %></button>
