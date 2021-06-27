@@ -2,8 +2,7 @@ class ExercisesController < ApplicationController
   include WardenHelper
   def show
     @exercise = Exercise.find(params[:id])
-    @exercise.exercises = parse_json @exercise.exercises
-
+    # @exercise.exercise_nodes = ExerciseNode.where(exercise_id: @exercise.id)
     render
   end
 

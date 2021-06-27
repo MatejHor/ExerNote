@@ -30,10 +30,11 @@
         </tr>
         </thead>
         <tbody>
-        <% @exercise.exercises.each do |exercise| %>
+        <% @exercise.exercise_nodes.each do |exercise| %>
           <tr>
             <%= form_tag delete_node_path, method: :delete, class: "" do %>
               <input value="<%= @exercise.id %>" name="id" type="hidden"/>
+              <input value="<%= exercise['id'] %>" name="exercise_node_id" type="hidden"/>
               <td class="w-35">
                 <label class="text-center"><%= exercise['title'] %></label>
                 <input type="hidden" name="title" class="special-width input-unstyled link-unstyled text-center" readonly value="<%= exercise['title'] %>"/>
