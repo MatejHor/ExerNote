@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def login
-    login_user params[:user][:nick]
+    login_user(params[:user][:nick], params[:user][:password])
   end
 
   def register
@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def create
     User.create(user_params)
-    login_user params[:user][:nick]
+    login_user(params[:user][:nick], params[:user][:password])
   end
 
   def logout
@@ -20,15 +20,16 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:nick, :name, :email, :password_digest)
+    params.require(:user).permit(:nick, :name, :email, :password)
   end
 
   def warden
     request.env['warden']
   end
 
-  def login_user(nick)
-    user = User.where(nick: nick).first
+  def login_user(nick, password)
+    # user = User.where(nick: nick).first
+    user = User.find_by(nick: nick)&.authenticate(password)
     if user
       warden.set_user(user)
       warden.authenticate!
