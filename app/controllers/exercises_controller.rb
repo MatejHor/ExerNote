@@ -2,7 +2,6 @@ class ExercisesController < ApplicationController
   include WardenHelper
   def show
     @exercise = Exercise.find(params[:id])
-    # @exercise.exercise_nodes = ExerciseNode.where(exercise_id: @exercise.id)
     render
   end
 
@@ -40,7 +39,12 @@ class ExercisesController < ApplicationController
   end
 
   def update
-    Exercise.update(id = params[:id], exercise_params)
+    exercise_parameters = exercise_params
+    if exercise_parameters[:created_at].eql? ""
+      exercise_parameters.delete :created_at
+      #exercise_parameters[:created_at] = Exercise.find(params[:id]).created_at
+    end
+    Exercise.update(id = params[:id], exercise_parameters)
     redirect_to exercise_path(params[:id])
   end
 
