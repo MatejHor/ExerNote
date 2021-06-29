@@ -39,12 +39,7 @@ class ExercisesController < ApplicationController
   end
 
   def update
-    exercise_parameters = exercise_params
-    if exercise_parameters[:created_at].eql? ""
-      exercise_parameters.delete :created_at
-      #exercise_parameters[:created_at] = Exercise.find(params[:id]).created_at
-    end
-    Exercise.update(id = params[:id], exercise_parameters)
+    Exercise.update(id = params[:id], exercise_params)
     redirect_to exercise_path(params[:id])
   end
 
