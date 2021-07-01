@@ -46,6 +46,13 @@ en:
   # Add
   save: "Save"
 
+  # Search
+  search:
+    search: "Search"
+    enter_exercise_title: "Exercise title"
+    date: "Date"
+    exercise date:  "Exercise and date"
+
   # Detail
   action: "Action"
   update: "Update"
@@ -78,8 +85,8 @@ en:
   series: "Series"
   date: "Date"
   time: "Time"
-  exer_node: "Execise"
-  exer_node_name: "Exercise name"
+  exercise_node: "Execise"
+  exercise_node_name: "Exercise name"
   distance: "Distance"
 
 

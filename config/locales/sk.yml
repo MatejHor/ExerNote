@@ -15,6 +15,13 @@ sk:
   # Add
   save: "Uložiť"
 
+  # Search
+  search:
+    search: "Hladať"
+    enter_exercise_title: "Názov cviku"
+    date: "Dátum"
+    exercise date: "Cvičenie a dátum"
+
   # Detail
   action: "Akcia"
   update: "Upraviť"
@@ -47,8 +54,8 @@ sk:
   series: "Opak."
   date: "Dátum"
   time: "Čas"
-  exer_node: "Cvik"
-  exer_node_name: "Názov cviku"
+  exercise_node: "Cvik"
+  exercise_node_name: "Názov cviku"
   distance: "Vzdialenosť"
 
 

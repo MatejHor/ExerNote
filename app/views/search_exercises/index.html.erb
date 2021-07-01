@@ -1,0 +1,60 @@
+<div class="mx-1 px-1 my-1 py-1">
+  <%= form_tag search_index_path, method: :get, class: "" do %>
+    <div class="form-group border px-1 py-1">
+      <div class="row justify-content-center px-1 py-1">
+        <p class="col-4 text-center mx-2"><%= t('search.enter_exercise_title') %></p>
+        <input type="text" class="col-7 text-center input-unstyled" name="title" value="<%= @title %>" autocomplete="off"/>
+      </div>
+      <div class="row justify-content-center px-1 py-1">
+        <button type="submit" class="col-5 btn btn-info mx-1"><%= t('search.search') %></button>
+      </div>
+    </div>
+  <% end %>
+
+  <% if @exercises.size > 0 %>
+    <div class="form-group border px-1 py-1">
+      <table class="table text-center">
+        <thead class="thead-dark">
+        <tr>
+          <th scope="col" class="w-35"><%= t('exercise_node') %></th>
+          <th scope="col" class="w-15"><%= t('weight') %></th>
+          <th scope="col" class="w-20"><%= t('series') %></th>
+          <% if device == "mobile" %>
+            <th scope="col" class="w-30"><%= t('search.date') %></th>
+          <% else %>
+            <th scope="col" class="w-30"><%= t('search.exercise date') %></th>
+          <% end %>
+        </tr>
+        </thead>
+        <tbody>
+        <% @exercises.each do |exercise| %>
+          <tr>
+            <td class="w-30">
+              <p class="text-center"><%= exercise["title"] %></p>
+            </td>
+            <td class="w-15">
+              <p class="text-center"><%= exercise["weight"] %></p>
+            </td>
+            <td class="w-20">
+              <p class="text-center"><%= exercise["series"] %></p>
+            </td>
+            <td class="w-35">
+              <a class="text-center link-unstyled" href="<%= exercise_path(exercise["exercise_id"]) %>">
+                <% if device == "mobile" %>
+                  <%= exercise["exercise_created_at"].strftime("%A") + " " + exercise["exercise_created_at"].strftime('%Y-%m-%d') %>
+                <% else %>
+                  <%= exercise["exercise_title"] + " " + exercise["exercise_created_at"].strftime('%Y-%m-%d') %>
+                <% end %>
+              </a>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="apple_pagination">
+      <%= will_paginate @exercise_nodes, :container => false, :previous_label => I18n.t('previous'), :next_label => I18n.t('next') %>
+    </div>
+  <% end %>
+</div>
