@@ -42653,3 +42653,172 @@ Processing by SearchExercisesController#index as HTML
 Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3661)
 
 
+Started GET "/" for ::1 at 2021-08-16 09:56:42 +0200
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (3.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."user_id" = $1 ORDER BY "exercises"."created_at" DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/controllers/exercises_controller.rb:14:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  [1m[35m (20.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercises" WHERE "exercises"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/exercises/index.html.erb:22
+  Rendered exercises/index.html.erb within layouts/application (Duration: 79.9ms | Allocations: 10732)
+  Rendered users/_login.html.erb (Duration: 3.1ms | Allocations: 469)
+  Rendered layouts/_header.html.erb (Duration: 7.3ms | Allocations: 1235)
+  Rendered layouts/_footer.html.erb (Duration: 2.1ms | Allocations: 196)
+Completed 200 OK in 229ms (Views: 128.7ms | ActiveRecord: 34.7ms | Allocations: 29480)
+
+
+Started GET "/search/index" for ::1 at 2021-08-16 09:56:47 +0200
+Processing by SearchExercisesController#index as HTML
+  Rendering search_exercises/index.html.erb within layouts/application
+  Rendered search_exercises/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 715)
+  Rendered users/_login.html.erb (Duration: 0.4ms | Allocations: 172)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 338)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.0ms | Allocations: 4897)
+
+
+Started GET "/search/index?title=%C5%A0ikm%C3%BD+benc" for ::1 at 2021-08-16 09:57:04 +0200
+Processing by SearchExercisesController#index as HTML
+  Parameters: {"title"=>"Šikmý benc"}
+  [1m[36mExerciseNode Load (36.5ms)[0m  [1m[34mSELECT "exercise_nodes".* FROM "exercise_nodes" INNER JOIN "exercises" ON "exercises"."id" = "exercise_nodes"."exercise_id" WHERE (unaccent(lower(exercise_nodes.title)) like unaccent('%šikmý benc%')) AND "exercises"."user_id" = $1 ORDER BY exercises.created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/search_exercises_controller.rb:21:in `index'
+  Rendering search_exercises/index.html.erb within layouts/application
+  Rendered search_exercises/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 97)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 333)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 81ms (Views: 6.6ms | ActiveRecord: 42.9ms | Allocations: 9530)
+
+
+Started GET "/search/index?title=Sikmy+benc" for ::1 at 2021-08-16 09:57:33 +0200
+Processing by SearchExercisesController#index as HTML
+  Parameters: {"title"=>"Sikmy benc"}
+  [1m[36mExerciseNode Load (4.8ms)[0m  [1m[34mSELECT "exercise_nodes".* FROM "exercise_nodes" INNER JOIN "exercises" ON "exercises"."id" = "exercise_nodes"."exercise_id" WHERE (unaccent(lower(exercise_nodes.title)) like unaccent('%sikmy benc%')) AND "exercises"."user_id" = $1 ORDER BY exercises.created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/search_exercises_controller.rb:21:in `index'
+  Rendering search_exercises/index.html.erb within layouts/application
+  Rendered search_exercises/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 97)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 333)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 14ms (Views: 5.5ms | ActiveRecord: 4.8ms | Allocations: 4629)
+
+
+Started GET "/search/index?title=Sikmy+benc" for ::1 at 2021-08-16 09:57:34 +0200
+Processing by SearchExercisesController#index as HTML
+  Parameters: {"title"=>"Sikmy benc"}
+  [1m[36mExerciseNode Load (3.9ms)[0m  [1m[34mSELECT "exercise_nodes".* FROM "exercise_nodes" INNER JOIN "exercises" ON "exercises"."id" = "exercise_nodes"."exercise_id" WHERE (unaccent(lower(exercise_nodes.title)) like unaccent('%sikmy benc%')) AND "exercises"."user_id" = $1 ORDER BY exercises.created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/search_exercises_controller.rb:21:in `index'
+  Rendering search_exercises/index.html.erb within layouts/application
+  Rendered search_exercises/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 97)
+  Rendered users/_login.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 333)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 14ms (Views: 7.0ms | ActiveRecord: 3.9ms | Allocations: 4611)
+
+
+Started GET "/search/index?title=Benc" for ::1 at 2021-08-16 09:57:37 +0200
+Processing by SearchExercisesController#index as HTML
+  Parameters: {"title"=>"Benc"}
+  [1m[36mExerciseNode Load (5.4ms)[0m  [1m[34mSELECT "exercise_nodes".* FROM "exercise_nodes" INNER JOIN "exercises" ON "exercises"."id" = "exercise_nodes"."exercise_id" WHERE (unaccent(lower(exercise_nodes.title)) like unaccent('%benc%')) AND "exercises"."user_id" = $1 ORDER BY exercises.created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/search_exercises_controller.rb:21:in `index'
+  [1m[36mExercise Load (1.0ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 528], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 527], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.8ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 522], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 520], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 517], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 479], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 473], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 470], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.2ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 469], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 462], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  Rendering search_exercises/index.html.erb within layouts/application
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_nodes" INNER JOIN "exercises" ON "exercises"."id" = "exercise_nodes"."exercise_id" WHERE (unaccent(lower(exercise_nodes.title)) like unaccent('%benc%')) AND "exercises"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/search_exercises/index.html.erb:57
+  Rendered search_exercises/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2127)
+  Rendered users/_login.html.erb (Duration: 0.4ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 333)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 87ms (Views: 11.5ms | ActiveRecord: 18.5ms | Allocations: 22060)
+
+
+Started GET "/search/index?title=Ben%C4%8D" for ::1 at 2021-08-16 09:57:42 +0200
+Processing by SearchExercisesController#index as HTML
+  Parameters: {"title"=>"Benč"}
+  [1m[36mExerciseNode Load (3.9ms)[0m  [1m[34mSELECT "exercise_nodes".* FROM "exercise_nodes" INNER JOIN "exercises" ON "exercises"."id" = "exercise_nodes"."exercise_id" WHERE (unaccent(lower(exercise_nodes.title)) like unaccent('%benč%')) AND "exercises"."user_id" = $1 ORDER BY exercises.created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/search_exercises_controller.rb:21:in `index'
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 528], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 527], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 522], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 520], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 517], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 479], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 473], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 470], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 469], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 462], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  Rendering search_exercises/index.html.erb within layouts/application
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_nodes" INNER JOIN "exercises" ON "exercises"."id" = "exercise_nodes"."exercise_id" WHERE (unaccent(lower(exercise_nodes.title)) like unaccent('%benč%')) AND "exercises"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/search_exercises/index.html.erb:57
+  Rendered search_exercises/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2111)
+  Rendered users/_login.html.erb (Duration: 0.6ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 333)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 55ms (Views: 14.9ms | ActiveRecord: 12.9ms | Allocations: 14250)
+
+
+Started GET "/search/index?title=%C3%9Azky" for ::1 at 2021-08-16 09:57:52 +0200
+Processing by SearchExercisesController#index as HTML
+  Parameters: {"title"=>"Úzky"}
+  [1m[36mExerciseNode Load (3.9ms)[0m  [1m[34mSELECT "exercise_nodes".* FROM "exercise_nodes" INNER JOIN "exercises" ON "exercises"."id" = "exercise_nodes"."exercise_id" WHERE (unaccent(lower(exercise_nodes.title)) like unaccent('%úzky%')) AND "exercises"."user_id" = $1 ORDER BY exercises.created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/controllers/search_exercises_controller.rb:21:in `index'
+  [1m[36mExercise Load (0.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 527], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 479], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 469], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 457], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 452], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 271], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 261], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.3ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 249], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 239], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."id" = $1 LIMIT $2[0m  [["id", 238], ["LIMIT", 1]]
+  ↳ app/controllers/search_exercises_controller.rb:26:in `block in index'
+  Rendering search_exercises/index.html.erb within layouts/application
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_nodes" INNER JOIN "exercises" ON "exercises"."id" = "exercise_nodes"."exercise_id" WHERE (unaccent(lower(exercise_nodes.title)) like unaccent('%úzky%')) AND "exercises"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/search_exercises/index.html.erb:57
+  Rendered search_exercises/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 1718)
+  Rendered users/_login.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 333)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 52ms (Views: 14.3ms | ActiveRecord: 14.6ms | Allocations: 13857)
+
+

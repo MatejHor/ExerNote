@@ -12,7 +12,7 @@ class SearchExercisesController < ApplicationController
       # exercise_name = "%" + ("Benc".downcase.gsub(/[[:punct:]]/, '')) + "%"
 
       @exercise_nodes = ExerciseNode
-                          .where("unaccent(lower(exercise_nodes.title)) like ?", exercise_name)
+                          .where("unaccent(lower(exercise_nodes.title)) like unaccent(?)", exercise_name)
                           .where("exercises.user": current_user['id'])
                           .joins(:exercise)
                           .order("exercises.created_at DESC")
