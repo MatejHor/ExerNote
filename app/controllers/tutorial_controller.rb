@@ -44,7 +44,7 @@ class TutorialController < ApplicationController
 
   def heroku
     # Create heroku
-    # heroku create
+    # heroku create <application_name> --stack heroku-18
 
     # Push heroku from git
     # git push heroku master
@@ -75,6 +75,11 @@ class TutorialController < ApplicationController
 
     # Download backup from heroku
     # heroku pg:backups:download
+
+    # Create backup from local db
+    # PGPASSWORD=postgres pg_dump -h localhost -U postgres exernote_development --no-owner --no-acl -f database.dump
+    # Insert data into heroku
+    # heroku pg:psql DATABASE_URL --app exernote < database.dump
   end
 
 end
