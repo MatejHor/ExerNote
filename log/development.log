@@ -42822,3 +42822,1178 @@ Processing by SearchExercisesController#index as HTML
 Completed 200 OK in 52ms (Views: 14.3ms | ActiveRecord: 14.6ms | Allocations: 13857)
 
 
+Started GET "/" for ::1 at 2022-08-08 20:27:39 +0200
+  
+PG::ConnectionBad (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+pg (1.2.3) lib/pg.rb:58:in `initialize'
+pg (1.2.3) lib/pg.rb:58:in `new'
+pg (1.2.3) lib/pg.rb:58:in `connect'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.2) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-08-08 20:28:18 +0200
+  
+PG::ConnectionBad (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+pg (1.2.3) lib/pg.rb:58:in `initialize'
+pg (1.2.3) lib/pg.rb:58:in `new'
+pg (1.2.3) lib/pg.rb:58:in `connect'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.2) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-08-08 20:30:08 +0200
+  
+PG::ConnectionBad (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+):
+  
+pg (1.2.3) lib/pg.rb:58:in `initialize'
+pg (1.2.3) lib/pg.rb:58:in `new'
+pg (1.2.3) lib/pg.rb:58:in `connect'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.2) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-08-08 20:37:09 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ExercisesController#index as HTML
+Completed   in 8ms (ActiveRecord: 0.0ms | Allocations: 375)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 20:37:09 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 45.1ms | Allocations: 7159)
+  Rendered users/_login.html.erb (Duration: 0.9ms | Allocations: 466)
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 1260)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 197)
+Completed 200 OK in 76ms (Views: 74.7ms | ActiveRecord: 0.0ms | Allocations: 16873)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 20:37:20 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 295ms (ActiveRecord: 6.6ms | Allocations: 7941)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-08 20:37:21 +0200
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (0.6ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."user_id" = $1 ORDER BY "exercises"."created_at" DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/controllers/exercises_controller.rb:14:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercises" WHERE "exercises"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/exercises/index.html.erb:22
+  Rendered exercises/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3573)
+  Rendered users/_login.html.erb (Duration: 0.4ms | Allocations: 172)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 339)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 30ms (Views: 11.5ms | ActiveRecord: 2.9ms | Allocations: 14401)
+
+
+Started GET "/logout" for 127.0.0.1 at 2022-08-08 20:37:24 +0200
+Processing by UsersController#logout as HTML
+Redirected to http://0.0.0.0:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 353)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 20:37:24 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 364)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 3526)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 20:37:29 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Completed 406 Not Acceptable in 266ms (ActiveRecord: 0.5ms | Allocations: 2595)
+
+
+  
+ActionController::MissingExactTemplate (UsersController#login is missing a template for request formats: text/html):
+  
+app/controllers/application_controller.rb:10:in `switch_locale'
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 20:39:40 +0200
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 300ms (ActiveRecord: 5.2ms | Allocations: 7440)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-08 20:39:40 +0200
+Processing by ExercisesController#index as HTML
+  [1m[36mExercise Load (1.0ms)[0m  [1m[34mSELECT "exercises".* FROM "exercises" WHERE "exercises"."user_id" = $1 ORDER BY "exercises"."created_at" DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/controllers/exercises_controller.rb:14:in `index'
+  Rendering exercises/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercises" WHERE "exercises"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/exercises/index.html.erb:22
+  Rendered exercises/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 6617)
+  Rendered users/_login.html.erb (Duration: 1.7ms | Allocations: 471)
+  Rendered layouts/_header.html.erb (Duration: 4.1ms | Allocations: 1239)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 196)
+Completed 200 OK in 69ms (Views: 49.0ms | ActiveRecord: 3.5ms | Allocations: 22796)
+
+
+Started GET "/logout" for 127.0.0.1 at 2022-08-08 20:39:42 +0200
+Processing by UsersController#logout as HTML
+Redirected to http://0.0.0.0:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 355)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 20:39:42 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 124)
+  Rendered users/_login.html.erb (Duration: 0.4ms | Allocations: 173)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 367)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 4198)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 20:39:46 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 270ms (ActiveRecord: 0.4ms | Allocations: 925)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-08 20:39:46 +0200
+Processing by ExercisesController#index as HTML
+Completed   in 2ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 20:39:46 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 3523)
+
+
+Started GET "/home?locale=en" for 127.0.0.1 at 2022-08-08 20:41:57 +0200
+Processing by HomeController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+  Rendered users/_login.html.erb (Duration: 0.3ms | Allocations: 172)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 467)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 4387)
+
+
+Started GET "/home?locale=sk" for 127.0.0.1 at 2022-08-08 20:43:26 +0200
+Processing by HomeController#index as HTML
+  Parameters: {"locale"=>"sk"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered users/_login.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 3539)
+
+
+Started GET "/home?locale=en" for 127.0.0.1 at 2022-08-08 20:43:29 +0200
+Processing by HomeController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered users/_login.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 3552)
+
+
+Started GET "/home?locale=en" for 127.0.0.1 at 2022-08-08 20:48:27 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3168)
+  Rendered users/_login.html.erb (Duration: 1.2ms | Allocations: 467)
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 1278)
+  Rendered layouts/_footer.html.erb (Duration: 1.6ms | Allocations: 197)
+Completed 200 OK in 47ms (Views: 40.7ms | ActiveRecord: 0.0ms | Allocations: 13036)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 20:48:33 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Completed 500 Internal Server Error in 286ms (ActiveRecord: 5.0ms | Allocations: 8851)
+
+
+  
+ActionView::MissingTemplate (Missing template users/update, application/update with {:locale=>[:en, :sk], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/matho/ExerNote/app/views"
+  * "/Users/matho/.rvm/gems/ruby-2.7.0/gems/actiontext-6.0.3.2/app/views"
+  * "/Users/matho/.rvm/gems/ruby-2.7.0/gems/actionmailbox-6.0.3.2/app/views"
+):
+  
+app/controllers/users_controller.rb:38:in `login_user'
+app/controllers/users_controller.rb:3:in `login'
+app/controllers/application_controller.rb:10:in `switch_locale'
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 20:50:22 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 294ms (Views: 7.4ms | ActiveRecord: 5.1ms | Allocations: 8216)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 20:51:13 +0200
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+  Rendering html template within layouts/application
+  Rendered html template within layouts/application (Duration: 0.0ms | Allocations: 5)
+  Rendered users/_login.html.erb (Duration: 1.4ms | Allocations: 467)
+  Rendered layouts/_header.html.erb (Duration: 3.8ms | Allocations: 1277)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 197)
+Completed 200 OK in 302ms (Views: 23.1ms | ActiveRecord: 5.0ms | Allocations: 19482)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 20:53:23 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/matho/ExerNote/app/controllers/users_controller.rb:41: syntax error, unexpected ')'
+      )
+      ^
+):
+  
+app/controllers/users_controller.rb:41: syntax error, unexpected ')'
+app/controllers/users_controller.rb:41: syntax error, unexpected ')'
+app/controllers/users_controller.rb:41: syntax error, unexpected ')'
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 20:53:47 +0200
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 291ms (ActiveRecord: 4.5ms | Allocations: 7420)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-08 20:53:47 +0200
+Processing by ExercisesController#index as HTML
+Completed   in 1ms (ActiveRecord: 0.0ms | Allocations: 347)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 20:53:47 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 3214)
+  Rendered users/_login.html.erb (Duration: 0.9ms | Allocations: 467)
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 1262)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 197)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 12953)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 20:54:30 +0200
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3210)
+  Rendered users/_login.html.erb (Duration: 1.5ms | Allocations: 467)
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | Allocations: 1278)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 197)
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 13108)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 20:54:32 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered users/_login.html.erb (Duration: 0.4ms | Allocations: 172)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 363)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 3541)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 20:54:37 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 284ms (ActiveRecord: 5.6ms | Allocations: 7308)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-08 20:54:38 +0200
+Processing by ExercisesController#index as HTML
+Completed   in 1ms (ActiveRecord: 0.0ms | Allocations: 339)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 20:54:38 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered users/_login.html.erb (Duration: 0.4ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 37)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 3537)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 20:56:34 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3169)
+  Rendered users/_login.html.erb (Duration: 1.1ms | Allocations: 467)
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | Allocations: 1278)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 197)
+Completed 200 OK in 39ms (Views: 33.4ms | ActiveRecord: 0.0ms | Allocations: 13037)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 20:56:45 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Completed 500 Internal Server Error in 283ms (ActiveRecord: 4.9ms | Allocations: 7622)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/users_controller.rb:42:in `format'
+app/controllers/users_controller.rb:42:in `login_user'
+app/controllers/users_controller.rb:3:in `login'
+app/controllers/application_controller.rb:10:in `switch_locale'
+Started GET "/home" for 127.0.0.1 at 2022-08-08 20:58:21 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 3212)
+  Rendered users/_login.html.erb (Duration: 1.3ms | Allocations: 467)
+  Rendered layouts/_header.html.erb (Duration: 3.9ms | Allocations: 1278)
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 197)
+Completed 200 OK in 41ms (Views: 36.5ms | ActiveRecord: 0.0ms | Allocations: 13094)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 20:58:26 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 5.3ms | Allocations: 7615)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/users_controller.rb:42:in `format'
+app/controllers/users_controller.rb:42:in `login_user'
+app/controllers/users_controller.rb:3:in `login'
+app/controllers/application_controller.rb:10:in `switch_locale'
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:01:34 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 84.6ms | Allocations: 65083)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.0ms | Allocations: 67015)
+
+
+  
+ActionView::Template::Error (undefined method `echo' for #<#<Class:0x00007f96ca3c8440>:0x00007f96ca4a68a8>):
+    2: 
+    3:   <div class="starter-template cover-container d-flex h-100 p-3 mx-auto flex-column">
+    4:     <h1>ExerNote</h1>
+    5:     <% echo @error %>
+    6:     <% if @error %>
+    7:       <script>alert('Wrong username or password!')</script>
+    8:     <% end %>
+  
+app/views/home/index.html.erb:5
+app/controllers/application_controller.rb:10:in `switch_locale'
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:01:49 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 3223)
+  Rendered users/_login.html.erb (Duration: 1.4ms | Allocations: 467)
+  Rendered layouts/_header.html.erb (Duration: 3.1ms | Allocations: 1278)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 197)
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 13099)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:02:01 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 23)
+  Rendered users/_login.html.erb (Duration: 0.3ms | Allocations: 172)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 363)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 3538)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:02:27 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 23)
+  Rendered users/_login.html.erb (Duration: 0.4ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 3535)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:02:29 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 23)
+  Rendered users/_login.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 3528)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:03:10 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3223)
+  Rendered users/_login.html.erb (Duration: 1.2ms | Allocations: 467)
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 1278)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 197)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 13099)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:03:23 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered users/_login.html.erb (Duration: 0.3ms | Allocations: 173)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 367)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 3761)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:03:24 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered users/_login.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3538)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:03:32 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1181)
+
+
+  
+NoMethodError (undefined method `+' for nil:NilClass):
+  
+app/controllers/home_controller.rb:3:in `index'
+app/controllers/application_controller.rb:10:in `switch_locale'
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:03:55 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 647)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/home_controller.rb:3:in `to_s'
+app/controllers/home_controller.rb:3:in `index'
+app/controllers/application_controller.rb:10:in `switch_locale'
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:03:56 +0200
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 630)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/home_controller.rb:3:in `to_s'
+app/controllers/home_controller.rb:3:in `index'
+app/controllers/application_controller.rb:10:in `switch_locale'
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:04:59 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 28)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 368)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 38)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 3825)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:05:02 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 21)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 3544)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:05:16 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 23)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 367)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 3758)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:05:17 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+  Rendered users/_login.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 3526)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:05:26 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 288ms (ActiveRecord: 6.7ms | Allocations: 7415)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-08 21:05:26 +0200
+Processing by ExercisesController#index as HTML
+Completed   in 1ms (ActiveRecord: 0.0ms | Allocations: 358)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:05:26 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 3560)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:06:21 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 21)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 367)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 3754)
+
+
+Started GET "/login?user%5Bnick%5D=a&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:06:26 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms | Allocations: 2341)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-08 21:06:26 +0200
+Processing by ExercisesController#index as HTML
+Completed   in 0ms (ActiveRecord: 0.0ms | Allocations: 258)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:06:26 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 3560)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:06:36 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 276ms (ActiveRecord: 2.7ms | Allocations: 4731)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-08 21:06:36 +0200
+Processing by ExercisesController#index as HTML
+Completed   in 0ms (ActiveRecord: 0.0ms | Allocations: 185)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:06:36 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 3534)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:07:17 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 367)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 3758)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:07:20 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/?error=true
+Completed 302 Found in 276ms (ActiveRecord: 3.0ms | Allocations: 6191)
+
+
+Started GET "/?error=true" for 127.0.0.1 at 2022-08-08 21:07:21 +0200
+Processing by ExercisesController#index as HTML
+  Parameters: {"error"=>"true"}
+Completed   in 0ms (ActiveRecord: 0.0ms | Allocations: 256)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:07:21 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 3556)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:07:44 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/?error=true
+Completed 302 Found in 267ms (ActiveRecord: 0.3ms | Allocations: 955)
+
+
+Started GET "/?error=true" for 127.0.0.1 at 2022-08-08 21:07:44 +0200
+Processing by ExercisesController#index as HTML
+  Parameters: {"error"=>"true"}
+Completed   in 0ms (ActiveRecord: 0.0ms | Allocations: 193)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:07:44 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 170.3ms | Allocations: 125899)
+Completed 500 Internal Server Error in 173ms (ActiveRecord: 0.0ms | Allocations: 127096)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `error' for #<#<Class:0x00007fb9c82be150>:0x00007fb9c82bc2b0>):
+    2: 
+    3:   <div class="starter-template cover-container d-flex h-100 p-3 mx-auto flex-column">
+    4:     <h1>ExerNote</h1>
+    5:     <% if error %>
+    6:       <script>alert('Wrong username or password!')</script>
+    7:     <% end %>
+    8:     <p class="lead"><%= t('auth_description') %></p>
+  
+app/views/home/index.html.erb:5
+app/controllers/application_controller.rb:10:in `switch_locale'
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:09:08 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 160)
+  Rendered users/_login.html.erb (Duration: 0.8ms | Allocations: 428)
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 1185)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 184)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 5985)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:09:13 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/?error=true
+Completed 302 Found in 263ms (ActiveRecord: 0.5ms | Allocations: 930)
+
+
+Started GET "/?error=true" for 127.0.0.1 at 2022-08-08 21:09:13 +0200
+Processing by ExercisesController#index as HTML
+  Parameters: {"error"=>"true"}
+Completed   in 0ms (ActiveRecord: 0.0ms | Allocations: 197)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:09:13 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 25)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 172)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 363)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 3558)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:09:44 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 367)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 3767)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:09:52 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/?error=true
+Completed 302 Found in 282ms (ActiveRecord: 4.1ms | Allocations: 6224)
+
+
+Started GET "/?error=true" for 127.0.0.1 at 2022-08-08 21:09:52 +0200
+Processing by ExercisesController#index as HTML
+  Parameters: {"error"=>"true"}
+Completed   in 0ms (ActiveRecord: 0.0ms | Allocations: 262)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:09:52 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 3543)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:11:48 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 25)
+  Rendered users/_login.html.erb (Duration: 0.3ms | Allocations: 173)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 367)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 3792)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:11:53 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 275ms (ActiveRecord: 3.4ms | Allocations: 6197)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-08 21:11:54 +0200
+Processing by ExercisesController#index as HTML
+Completed   in 0ms (ActiveRecord: 0.0ms | Allocations: 250)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:11:54 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered users/_login.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 3559)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:12:14 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 3.7ms | Allocations: 6616)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/users_controller.rb:43:in `login_user'
+app/controllers/users_controller.rb:3:in `login'
+app/controllers/application_controller.rb:10:in `switch_locale'
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:12:50 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Completed 500 Internal Server Error in 363ms (ActiveRecord: 2.7ms | Allocations: 89928)
+
+
+  
+NameError (undefined local variable or method `error' for #<UsersController:0x00007fb9c65ab3d8>):
+  
+app/controllers/users_controller.rb:43:in `login_user'
+app/controllers/users_controller.rb:3:in `login'
+app/controllers/application_controller.rb:10:in `switch_locale'
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:13:09 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/?error=true
+Completed 302 Found in 280ms (ActiveRecord: 3.5ms | Allocations: 6273)
+
+
+Started GET "/?error=true" for 127.0.0.1 at 2022-08-08 21:13:10 +0200
+Processing by ExercisesController#index as HTML
+  Parameters: {"error"=>"true"}
+Completed   in 0ms (ActiveRecord: 0.0ms | Allocations: 252)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:13:10 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 25)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 367)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 3746)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:14:39 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered users/_login.html.erb (Duration: 0.3ms | Allocations: 173)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 367)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 3767)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:14:44 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/?error=bla
+Completed 302 Found in 281ms (ActiveRecord: 3.8ms | Allocations: 6168)
+
+
+Started GET "/?error=bla" for 127.0.0.1 at 2022-08-08 21:14:44 +0200
+Processing by ExercisesController#index as HTML
+  Parameters: {"error"=>"bla"}
+Completed   in 1ms (ActiveRecord: 0.0ms | Allocations: 252)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:14:44 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 3537)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:16:32 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 166)
+  Rendered users/_login.html.erb (Duration: 0.7ms | Allocations: 428)
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 1185)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 184)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 5973)
+
+
+Started GET "/login?user%5Bnick%5D=&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:16:38 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/?error=bla
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 894)
+
+
+Started GET "/?error=bla" for 127.0.0.1 at 2022-08-08 21:16:38 +0200
+Processing by ExercisesController#index as HTML
+  Parameters: {"error"=>"bla"}
+Completed   in 0ms (ActiveRecord: 0.0ms | Allocations: 191)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:16:38 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 25)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 172)
+  Rendered layouts/_header.html.erb (Duration: 35.6ms | Allocations: 363)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 95ms (Views: 93.9ms | ActiveRecord: 0.0ms | Allocations: 3547)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:18:47 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 367)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3788)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:18:54 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/?error=bla
+Completed 302 Found in 280ms (ActiveRecord: 2.7ms | Allocations: 6225)
+
+
+Started GET "/?error=bla" for 127.0.0.1 at 2022-08-08 21:18:55 +0200
+Processing by ExercisesController#index as HTML
+  Parameters: {"error"=>"bla"}
+Completed   in 0ms (ActiveRecord: 0.0ms | Allocations: 250)
+
+
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:18:55 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 171)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 37)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 3561)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:19:57 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Completed 500 Internal Server Error in 284ms (ActiveRecord: 3.7ms | Allocations: 7729)
+
+
+  
+ActionView::MissingTemplate (Missing layout /layouts with {:locale=>[:en, :sk], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/matho/ExerNote/app/views"
+  * "/Users/matho/.rvm/gems/ruby-2.7.0/gems/actiontext-6.0.3.2/app/views"
+  * "/Users/matho/.rvm/gems/ruby-2.7.0/gems/actionmailbox-6.0.3.2/app/views"
+):
+  
+app/controllers/users_controller.rb:38:in `login_user'
+app/controllers/users_controller.rb:3:in `login'
+app/controllers/application_controller.rb:10:in `switch_locale'
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:20:32 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 3)
+Redirected to 
+Completed 500 Internal Server Error in 276ms (Views: 0.8ms | ActiveRecord: 2.8ms | Allocations: 6874)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/users_controller.rb:41:in `login_user'
+app/controllers/users_controller.rb:3:in `login'
+app/controllers/application_controller.rb:10:in `switch_locale'
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:21:51 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Completed 500 Internal Server Error in 281ms (ActiveRecord: 2.7ms | Allocations: 6523)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - -b):
+  
+app/controllers/users_controller.rb:43:in `gets'
+app/controllers/users_controller.rb:43:in `gets'
+app/controllers/users_controller.rb:43:in `login_user'
+app/controllers/users_controller.rb:3:in `login'
+app/controllers/application_controller.rb:10:in `switch_locale'
+Started GET "/home" for 127.0.0.1 at 2022-08-08 21:22:26 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 159)
+  Rendered users/_login.html.erb (Duration: 0.6ms | Allocations: 428)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 1188)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 184)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 6038)
+
+
+Started GET "/login?user%5Bnick%5D=mathorniak&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2022-08-08 21:22:31 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"nick"=>"mathorniak", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nick" = $1 LIMIT $2[0m  [["nick", "mathorniak"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:32:in `login_user'
+Redirected to http://0.0.0.0:3000/home?error=true
+Completed 302 Found in 276ms (ActiveRecord: 3.0ms | Allocations: 6210)
+
+
+Started GET "/home?error=true" for 127.0.0.1 at 2022-08-08 21:22:31 +0200
+Processing by HomeController#index as HTML
+  Parameters: {"error"=>"true"}
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 23)
+  Rendered users/_login.html.erb (Duration: 0.2ms | Allocations: 172)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 363)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 3558)
+
+

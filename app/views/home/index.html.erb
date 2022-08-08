@@ -2,6 +2,9 @@
 
   <div class="starter-template cover-container d-flex h-100 p-3 mx-auto flex-column">
     <h1>ExerNote</h1>
+    <% if params[:error] %>
+      <script>alert('Wrong username or password!')</script>
+    <% end %>
     <p class="lead"><%= t('auth_description') %></p>
   </div>
 

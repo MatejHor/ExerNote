@@ -34,6 +34,13 @@ class UsersController < ApplicationController
       warden.set_user(user)
       warden.authenticate!
       redirect_to root_path
+    else
+      # render(
+      #   html: "<script>alert('Wrong username or password!')</script>".html_safe,
+      # )
+      # redirect_to root_path
+      # format.html { redirect_to root_path, alert: 'Message sent!' }
+      redirect_to home_path(:error => true)
     end
   end
 end
