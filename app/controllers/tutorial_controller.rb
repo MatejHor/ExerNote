@@ -95,6 +95,7 @@ class TutorialController < ApplicationController
     # - git commit -m "Update Gemfile.lock"
     # - git push origin master
     # - git push heroku master
+
   end
 
 end
