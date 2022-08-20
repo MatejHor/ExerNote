@@ -22,6 +22,28 @@ sk:
     date: "Dátum"
     exercise date: "Cvičenie a dátum"
 
+  # Statistics
+  stats:
+    stats: "Štatistika"
+    nick: "Prezývka"
+    last_exercise: "Posledné cvičenie bolo"
+    series: "Opakovanie: "
+    weight: "Váha: "
+    exercise: "Názov cviku: "
+    or: " alebo "
+    and: " a "
+    5last: "5 najzriedkavejších cvikov "
+    5most: "5 najčastejších cvikov"
+    time_data: "Vývoj času strávený cvičením"
+    weight_evolution: "Vývoj váh pre cvik: "
+    series_evolution: "Vývoj série pre cvik: "
+    exercise_time: "Čas jedného opakovania"
+    evolution_time: "Evolúcia cviku"
+    weight_graph: "Váhy"
+    series_graph: "Opakovania"
+    weight_series_evolution: "Vývoj váh a opakovaní pre cvik: "
+
+
   # Detail
   action: "Akcia"
   update: "Upraviť"
@@ -46,6 +68,7 @@ sk:
   email: "Email"
   name: "Meno"
   password: "Heslo"
+  alert: "Zlá prezývka alebo heslo!"
 
   # Exercise
   exercise: "Cvičenie"

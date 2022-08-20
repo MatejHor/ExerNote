@@ -1,0 +1,91 @@
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+<div class="mx-1 px-1 my-1 py-1">
+  <div class="border px-3 py-3 my-5 mx-5">
+    <div class="row">
+      <h4 class="col text-center mx-2 my-2 py-2"><%= t('stats.nick') %>: <%= @user_name %></h4>
+      <h4 class="col text-center mx-2 my-2 py-2"><%= t('stats.last_exercise') %>: <%= @last_exercise %></h4>
+    </div>
+  </div>
+  <div class="border px-3 py-3 my-5 mx-5">
+    <h4 class="text-center"><%= t('stats.time_data') %></h4>
+    <%= line_chart @time_data,
+                   ytitle: t('stats.exercise_time'),
+                   xtitle: t('stats.evolution_time'),
+                   colors: ["green"] %>
+  </div>
+  <div class="border px-3 py-3 my-5 mx-5">
+    <div class="row">
+      <div class="col text-center mx-2 my-2 py-2">
+        <h4 class="text-center"><%= t('stats.5most') %></h4>
+        <table class="table text-center">
+          <thead class="thead-dark">
+          <tr>
+            <th scope="col" class="w-35"><%= t('stats.exercise') %></th>
+            <th scope="col" class="w-15"><%= t('weight') + t('stats.or') + t('stats.series') %></th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @top_exercise.each do |exercise| %>
+            <tr>
+              <td class="w-35">
+                <label class="text-center"><%= exercise['title'] %></label>
+              </td>
+              <td class="w-15">
+                <% if exercise['weight'].eql? "" %>
+                  <label class="text-center"><%= t('stats.series') + exercise['series'] %></label>
+                <% else %>
+                  <label class="text-center"><%= t('stats.weight') + exercise['weight'] %></label>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="col text-center mx-2 my-2 py-2">
+        <h4 class="text-center"><%= t('stats.5last') %></h4>
+        <table class="table text-center">
+          <thead class="thead-dark">
+          <tr>
+            <th scope="col" class="w-35"><%= t('stats.exercise') %></th>
+            <th scope="col" class="w-15"><%= t('weight') + t('stats.or') + t('stats.series') %></th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @bottom_exercise.each do |exercise| %>
+            <tr>
+              <td class="w-35">
+                <label class="text-center"><%= exercise['title'] %></label>
+
+              </td>
+              <td class="w-15">
+                <% if exercise['weight'].eql? "" %>
+                  <label class="text-center"><%= t('stats.series') + exercise['series'] %></label>
+                <% else %>
+                  <label class="text-center"><%= t('stats.weight') + exercise['weight'] %></label>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <% @weight_evolution.each do |exercise| %>
+    <div class="border px-3 py-3 my-5 mx-5">
+      <div>
+        <h4 class="text-center"><%= t('stats.weight_series_evolution') + exercise['title'] %></h4>
+        <%= line_chart [{ data: exercise['weights'],
+                          name: t('stats.weight_graph') },
+                        { data: exercise['series'],
+                          name: t('stats.series_graph') }],
+                       colors: %w[cyan salmon],
+                       xtitle: t('stats.evolution_time'),
+                       ytitle: t('stats.weight_graph') + ", " + t('stats.series_graph')
+        %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -53,6 +53,27 @@ en:
     date: "Date"
     exercise date:  "Exercise and date"
 
+  # Statistics
+  stats:
+    stats: "Statistics"
+    nick: "Nick"
+    last_exercise: "Last exercise was on "
+    series: "Series: "
+    weight: "Weight: "
+    exercise: "Exercise name: "
+    or: " or "
+    and: " and "
+    5last: "5 Least doing exercise"
+    5most: "5 Most doing exercise"
+    time_data: "Evolution of spent time on exercise"
+    weight_evolution: "Evolution of weight for exercise: "
+    series_evolution: "Evolution of series for exercise: "
+    weight_series_evolution: "Evolution of weight and series for exercise: "
+    exercise_time: "Time of one repetition"
+    evolution_time: "Evolution of exercise"
+    weight_graph: "Weights"
+    series_graph: "Series"
+
   # Detail
   action: "Action"
   update: "Update"
@@ -77,6 +98,7 @@ en:
   email: "Email"
   name: "Name"
   password: "Password"
+  alert: "Wrong username or password!"
 
   # Exercise
   exercise: "Exercise"

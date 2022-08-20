@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   # SearchExercises
   get '/search/index' => 'search_exercises#index', as: 'search_index'
 
+  # StatisticsExercises
+  get '/statistics/index' => 'statistics#index', as: 'statistics_index'
+
   # Home
   get '/home' => 'home#index', as: 'home'
   root 'exercises#index'

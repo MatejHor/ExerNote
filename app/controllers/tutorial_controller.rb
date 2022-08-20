@@ -76,8 +76,12 @@ class TutorialController < ApplicationController
     # Download backup from heroku
     # heroku pg:backups:download
 
+    # Get data into database
+    # pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d exernote_production latest.dump.20220820
+
     # Create backup from local db
     # PGPASSWORD=postgres pg_dump -h localhost -U postgres exernote_development --no-owner --no-acl -f database.dump
+
     # Insert data into heroku
     # heroku pg:psql DATABASE_URL --app exernote < database.dump
   end
