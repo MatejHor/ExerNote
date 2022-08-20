@@ -84,6 +84,17 @@ class TutorialController < ApplicationController
 
     # Insert data into heroku
     # heroku pg:psql DATABASE_URL --app exernote < database.dump
+
+    # Error with rake task not found
+    # - bundle version # If higher than 2.1.4
+    # - gem uninstall bundler
+    #
+    # Deleted Gemfile.lock
+    # - bundle install
+    # - git add .
+    # - git commit -m "Update Gemfile.lock"
+    # - git push origin master
+    # - git push heroku master
   end
 
 end
