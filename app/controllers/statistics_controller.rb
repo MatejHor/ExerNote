@@ -113,24 +113,30 @@ class StatisticsController < ApplicationController
     if series_pattern == "s"
       series = "(LEFT(series, position('x' in series) - 1)::decimal) as series"
     elsif series_pattern == "r"
-      series = "(RIGHT(series, length(series) - position('x' in series))::decimal) as series"
+      series = "(NULLIF(regexp_replace(regexp_replace(RIGHT(series, length(series) - position('x' in series)), ',','.','g'), '[^\\.\\d]','','g'), '')::decimal) as series"
     else
-      series = "(LEFT(series, position('x' in series) - 1)::decimal * RIGHT(series, length(series) - position('x' in series))::decimal) as series"
+      series = "(LEFT(series, position('x' in series) - 1)::decimal * NULLIF(regexp_replace(regexp_replace(RIGHT(series, length(series) - position('x' in series)), ',','.','g'), '[^\\.\\d]','','g'), '')::decimal) as series"
     end
 
     # puts "Before searching title: " + title.to_s + " " + series_pattern.to_s
     exercise = ExerciseNode
                  .joins(:exercise)
                  .where("exercises.user": current_user['id'])
-                 .where("exercise_nodes.weight != ''")
                  .where("exercise_nodes.series LIKE '_x%'")
                  .where("BTRIM(unaccent(lower(exercise_nodes.title))) like BTRIM(unaccent(?))", title)
                  .order("exercise_nodes.created_at DESC")
                  .select("exercise_nodes.title, exercise_nodes.weight, " + series.to_s)
                  .limit(100)
 
+    exercise.each do | node |
+      unless Integer(node.weight, exception: false)
+        node.weight = 0
+      end
+    end
+
+
     { 'title' => exercise[0].title,
-      'weights' => Hash[(0...exercise.size).zip exercise.map(&:weight)],
-      'series' => Hash[(0...exercise.size).zip exercise.map(&:series)] }
+      'weights' => Hash[(0...exercise.size).zip exercise.reverse.map(&:weight)],
+      'series' => Hash[(0...exercise.size).zip exercise.reverse.map(&:series)] }
   end
 end
