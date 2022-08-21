@@ -2,6 +2,10 @@ class StatisticsController < ApplicationController
   include WardenHelper
 
   def index
+    @title = params[:title]
+    @series_pattern = params[:series_pattern]
+    # puts "PARAMS title, series: " + @title.to_s + " " + @series_pattern.to_s + " END"
+
     # User name
     @user_name = User.where("id": current_user['id'])[0].nick
     # Last exercise
@@ -17,7 +21,7 @@ class StatisticsController < ApplicationController
     # Bottom 5 done exercise node
     @bottom_exercise = bottom_exercise
     # Evolution of weight for top 1 done exercise node
-    @weight_evolution = evolution_ws
+    @exercise = evolution_ws(@title, @series_pattern)
   end
 
   def evolution_time
@@ -86,38 +90,47 @@ class StatisticsController < ApplicationController
                    .order("exercise_nodes.created_at DESC")
                    .select("exercise_nodes.title, exercise_nodes.weight, exercise_nodes.series")
                    .limit(1)
-      puts exercise[0].title
       bottom_exercise.append({ 'title' => exercise[0].title, 'weight' => exercise[0].weight, 'series' => exercise[0].series })
     end
     bottom_exercise
   end
 
-  def evolution_ws
-
-    data = ExerciseNode
-             .joins(:exercise)
-             .where("exercises.user": current_user['id'])
-             .where("exercise_nodes.weight != ''")
-             .group("BTRIM(unaccent(lower(exercise_nodes.title)))")
-             .select("COUNT(*) as count, BTRIM(unaccent(lower(exercise_nodes.title))) as title")
-             .order("count DESC")
-             .limit(5)
-    weight_evolution = []
-    data.each do |item|
-      exercise = ExerciseNode
-                   .joins(:exercise)
-                   .where("exercises.user": current_user['id'])
-                   .where("exercise_nodes.weight != ''")
-                   .where("exercise_nodes.series LIKE '_x__' OR exercise_nodes.series LIKE '_x_'")
-                   .where("BTRIM(unaccent(lower(exercise_nodes.title))) like BTRIM(unaccent(?))", item.title)
-                   .order("exercise_nodes.created_at DESC")
-                   .select("exercise_nodes.title, exercise_nodes.weight, (LEFT(series, position('x' in series) - 1)::decimal * RIGHT(series, length(series) - position('x' in series))::decimal) as series")
-                   .limit(100)
-
-      weight_evolution.append({ 'title' => exercise[0].title,
-                                'weights' => Hash[(0...exercise.size).zip exercise.map(&:weight)],
-                                'series' => Hash[(0...exercise.size).zip exercise.map(&:series)] })
+  def evolution_ws(title, series_pattern)
+    if title.nil? or title == ''
+      title = ExerciseNode
+                .joins(:exercise)
+                .where("exercises.user": current_user['id'])
+                .where("exercise_nodes.weight != ''")
+                .group("BTRIM(unaccent(lower(exercise_nodes.title)))")
+                .select("COUNT(*) as count, BTRIM(unaccent(lower(exercise_nodes.title))) as title")
+                .order("count DESC")
+                .limit(1)
+      title = title[0].title
+    else
+      title = title.downcase
     end
-    weight_evolution
+
+    if series_pattern == "s"
+      series = "(LEFT(series, position('x' in series) - 1)::decimal) as series"
+    elsif series_pattern == "r"
+      series = "(RIGHT(series, length(series) - position('x' in series))::decimal) as series"
+    else
+      series = "(LEFT(series, position('x' in series) - 1)::decimal * RIGHT(series, length(series) - position('x' in series))::decimal) as series"
+    end
+
+    # puts "Before searching title: " + title.to_s + " " + series_pattern.to_s
+    exercise = ExerciseNode
+                 .joins(:exercise)
+                 .where("exercises.user": current_user['id'])
+                 .where("exercise_nodes.weight != ''")
+                 .where("exercise_nodes.series LIKE '_x%'")
+                 .where("BTRIM(unaccent(lower(exercise_nodes.title))) like BTRIM(unaccent(?))", title)
+                 .order("exercise_nodes.created_at DESC")
+                 .select("exercise_nodes.title, exercise_nodes.weight, " + series.to_s)
+                 .limit(100)
+
+    { 'title' => exercise[0].title,
+      'weights' => Hash[(0...exercise.size).zip exercise.map(&:weight)],
+      'series' => Hash[(0...exercise.size).zip exercise.map(&:series)] }
   end
 end

@@ -73,6 +73,13 @@ en:
     evolution_time: "Evolution of exercise"
     weight_graph: "Weights"
     series_graph: "Series"
+    enter_series_pattern: "How series should look: "
+    enter_exercise_title: "Exercise to show: "
+    radio:
+      multiply: "Both repeat and series "
+      repeat: "Only repeat "
+      series: "Only series "
+    view: "Show"
 
   # Detail
   action: "Action"

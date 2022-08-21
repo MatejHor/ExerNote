@@ -42,7 +42,13 @@ sk:
     weight_graph: "Váhy"
     series_graph: "Opakovania"
     weight_series_evolution: "Vývoj váh a opakovaní pre cvik: "
-
+    enter_series_pattern: "Ako séria má byť zobrazená: "
+    enter_exercise_title: "Cvik na zobrazenie: "
+    radio:
+      multiply: "Opakovanie aj séria "
+      repeat: "Iba opakovanie "
+      series: "Iba séria "
+    view: "Zobraziť"
 
   # Detail
   action: "Akcia"
