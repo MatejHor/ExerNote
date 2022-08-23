@@ -2,6 +2,14 @@ class StatisticsController < ApplicationController
   include WardenHelper
 
   def index
+    if request.user_agent =~ /(tablet|ipad)|(android(?!.*mobile))/i
+      @limit = 50
+    elsif request.user_agent =~ /Mobile/
+      @limit = 20
+    else
+      @limit = 100
+    end
+
     @title = params[:title]
     @series_pattern = params[:series_pattern]
     # puts "PARAMS title, series: " + @title.to_s + " " + @series_pattern.to_s + " END"
@@ -43,7 +51,7 @@ class StatisticsController < ApplicationController
                            .where("exercises.title LIKE '%Cvicenie%'")
                            .where("exercises.time != ''")
                            .select("exercises.time, nodes.sum, (nodes.sum/exercises.time::decimal) as result")
-                           .limit(100)
+                           .limit(@limit)
     Hash[(0...exercise_time_data.size).zip exercise_time_data.map(&:result)]
   end
 
@@ -126,14 +134,13 @@ class StatisticsController < ApplicationController
                  .where("BTRIM(unaccent(lower(exercise_nodes.title))) like BTRIM(unaccent(?))", title)
                  .order("exercise_nodes.created_at DESC")
                  .select("exercise_nodes.title, exercise_nodes.weight, " + series.to_s)
-                 .limit(100)
+                 .limit(@limit)
 
-    exercise.each do | node |
+    exercise.each do |node|
       unless Integer(node.weight, exception: false)
         node.weight = 0
       end
     end
-
 
     { 'title' => exercise[0].title,
       'weights' => Hash[(0...exercise.size).zip exercise.reverse.map(&:weight)],

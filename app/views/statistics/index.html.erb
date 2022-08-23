@@ -76,14 +76,14 @@
   <div class="border px-3 py-3 my-5 mx-5">
     <div>
       <h4 class="text-center"><%= t('stats.weight_series_evolution') + @exercise['title'] %></h4>
-      <%= line_chart [{ data: @exercise['weights'],
-                        name: t('stats.weight_graph') },
-                      { data: @exercise['series'],
-                        name: t('stats.series_graph') }],
-                     colors: %w[cyan salmon],
-                     xtitle: t('stats.evolution_time'),
-                     ytitle: t('stats.weight_graph') + ", " + t('stats.series_graph')
-      %>
+        <%= line_chart [{ data: @exercise['weights'],
+                          name: t('stats.weight_graph') },
+                        { data: @exercise['series'],
+                          name: t('stats.series_graph') }],
+                       colors: %w[cyan salmon],
+                       xtitle: t('stats.evolution_time'),
+                       ytitle: t('stats.weight_graph') + ", " + t('stats.series_graph')
+        %>
     </div>
     <%= form_tag statistics_index_path, method: :get, class: "" do %>
       <div class="row justify-content-center px-1 py-1">
@@ -91,26 +91,49 @@
         <input type="text" class="col-7 text-center input-unstyled" name="title" value="<%= @exercise['title'] %>" autocomplete="off"/>
       </div>
       <div class="row justify-content-center px-1 py-1">
-        <p class="col-4 text-center mx-3"><%= t('stats.enter_series_pattern') %></p>
-        <!--          <input type="text" class="col-7 text-center input-unstyled" name="series_pattern" value="<%#= @series_pattern %>" autocomplete="off"/>-->
-        <div class="col-2 text-center mx-2 form-check">
-          <input class="form-check-input" type="radio" name="series_pattern" id="flexRadioDefault1" value="m" checked>
-          <label class="form-check-label" for="flexRadioDefault1">
-            <%= t('stats.radio.multiply') %>
-          </label>
-        </div>
-        <div class="col-2 text-center mx-2 form-check">
-          <input class="form-check-input" type="radio" name="series_pattern" id="flexRadioDefault2" value="r">
-          <label class="form-check-label" for="flexRadioDefault2">
-            <%= t('stats.radio.repeat') %>
-          </label>
-        </div>
-        <div class="col-2 text-center mx-2 form-check">
-          <input class="form-check-input" type="radio" name="series_pattern" id="flexRadioDefault2" value="s">
-          <label class="form-check-label" for="flexRadioDefault3">
-            <%= t('stats.radio.series') %>
-          </label>
-        </div>
+        <% if device == "mobile" %>
+          <p class="text-center mx-3"><%= t('stats.enter_series_pattern') %></p>
+          <!--          <input type="text" class="col-7 text-center input-unstyled" name="series_pattern" value="<%#= @series_pattern %>" autocomplete="off"/>-->
+          <div class="text-center mx-2 form-check">
+            <input class="form-check-input" type="radio" name="series_pattern" id="flexRadioDefault1" value="m" checked>
+            <label class="form-check-label" for="flexRadioDefault1">
+              <%= t('stats.radio.multiply') %>
+            </label>
+          </div>
+          <div class="text-center mx-2 form-check">
+            <input class="form-check-input" type="radio" name="series_pattern" id="flexRadioDefault2" value="r">
+            <label class="form-check-label" for="flexRadioDefault2">
+              <%= t('stats.radio.repeat') %>
+            </label>
+          </div>
+          <div class="text-center mx-2 form-check">
+            <input class="form-check-input" type="radio" name="series_pattern" id="flexRadioDefault2" value="s">
+            <label class="form-check-label" for="flexRadioDefault3">
+              <%= t('stats.radio.series') %>
+            </label>
+          </div>
+        <% else %>
+          <p class="col-4 text-center mx-3"><%= t('stats.enter_series_pattern') %></p>
+          <!--          <input type="text" class="col-7 text-center input-unstyled" name="series_pattern" value="<%#= @series_pattern %>" autocomplete="off"/>-->
+          <div class="col-2 text-center mx-2 form-check">
+            <input class="form-check-input" type="radio" name="series_pattern" id="flexRadioDefault1" value="m" checked>
+            <label class="form-check-label" for="flexRadioDefault1">
+              <%= t('stats.radio.multiply') %>
+            </label>
+          </div>
+          <div class="col-2 text-center mx-2 form-check">
+            <input class="form-check-input" type="radio" name="series_pattern" id="flexRadioDefault2" value="r">
+            <label class="form-check-label" for="flexRadioDefault2">
+              <%= t('stats.radio.repeat') %>
+            </label>
+          </div>
+          <div class="col-2 text-center mx-2 form-check">
+            <input class="form-check-input" type="radio" name="series_pattern" id="flexRadioDefault2" value="s">
+            <label class="form-check-label" for="flexRadioDefault3">
+              <%= t('stats.radio.series') %>
+            </label>
+          </div>
+        <% end %>
       </div>
       <div class="row justify-content-center px-1 py-1">
         <button type="submit" class="col-5 btn btn-info mx-1"><%= t('stats.view') %></button>
