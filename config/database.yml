@@ -19,7 +19,7 @@ default: &default
   encoding: unicode
   username: kvvghomw
   password: XXktDQdhDgpbSyM8qXPz68SK32Dbg5Nd
-  hist: mouse.db.elephantsql.com
+  host: mouse.db.elephantsql.com
   port: 5432
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
